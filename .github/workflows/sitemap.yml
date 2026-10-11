@@ -1,0 +1,30 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ main ] # Change this if your main branch is called "master"
+
+jobs:
+  sitemap_job:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out your repository code
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Important: fetches all history for accurate lastmod dates
+
+      # 2. Generate the sitemap using your domain
+      - name: Generate Sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://gamerock.com.ng/
+
+      # 3. Commit the new sitemap.xml back to your repository
+      - name: Commit Sitemap
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add sitemap.xml
+          git commit -m "Generate sitemap" || exit 0
+          git push
