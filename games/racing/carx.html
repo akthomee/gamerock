@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberdeck">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CarX Street — Download for Android &amp; iOS | GameRock</title>
+<meta name="description" content="Download CarX Street for Android and iOS. Open-world drift racing with deep customization, realistic physics and multiplayer." />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:title" content="CarX Street — Download for Android & iOS" />
+<meta property="og:description" content="Open-world drift racing with deep customization, realistic physics and multiplayer." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gamerock.com.ng/games/racing/carx.html" />
+<meta property="og:image" content="https://gamerock.com.ng/images/carx-image-1.jpg" />
+<link rel="canonical" href="https://gamerock.com.ng/games/racing/carx.html" />
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('gr-theme') || 'cyberdeck';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../css/responsive.css" />
+
+<script src="../../js/main.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://gamerock.com.ng/gr-logo-1.png" />
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025861444505003" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS58RYFRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FLS58RYFRR');
+</script>
+</head>
+
+<body data-page="carx">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-motes" id="bg-motes"></div>
+  <div class="bg-sun"></div>
+  <div class="bg-rain" id="bg-rain"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../../index.html" aria-label="GameRock — home">
+      <img class="logo" src="../../images/gr-logo-1.png">
+      <span class="brand-text"><b>GAME</b><i>ROCK</i></span>
+    </a>
+
+    <form class="header-search" role="search" action="../../search.html" method="get" autocomplete="off">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" name="q" placeholder="Search games, apps, tags…" aria-label="Search" />
+      <kbd>/</kbd>
+    </form>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="../../index.html">Home</a>
+
+      <div class="has-drop">
+        <button class="nav-link" type="button">
+          Games <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="drop" role="menu">
+          <a role="menuitem" href="../games.html">All Games</a>
+          <a role="menuitem" href="../action/action.html">Action</a>
+          <a role="menuitem" href="racing.html">Racing</a>
+          <a role="menuitem" href="../simulation/simulation.html">Simulation</a>
+        </div>
+      </div>
+
+      <div class="has-drop">
+        <button class="nav-link" type="button">
+          Apps <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="drop" role="menu">
+          <a role="menuitem" href="../../apps/apps.html">All Apps</a>
+          <a role="menuitem" href="../../apps/tools/tools.html">Tools</a>
+          <a role="menuitem" href="../../apps/media/media.html">Media</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="#support-toggle">Support</a>
+
+      <div class="theme-picker" id="theme-picker">
+        <button class="icon-btn theme-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Change theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="theme-menu" role="listbox" aria-label="Choose theme">
+          <button type="button" role="option" data-theme-set="cyberdeck" class="theme-opt">
+            <span class="swatch sw-cyberdeck"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Cyberdeck</span>
+            <span class="desc">Neon cyan · deep space</span>
+          </button>
+          <button type="button" role="option" data-theme-set="daylight" class="theme-opt">
+            <span class="swatch sw-daylight"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Daylight</span>
+            <span class="desc">Clean light · corporate</span>
+          </button>
+          <button type="button" role="option" data-theme-set="synthwave" class="theme-opt">
+            <span class="swatch sw-synthwave"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Synthwave</span>
+            <span class="desc">80s magenta · retro</span>
+          </button>
+          <button type="button" role="option" data-theme-set="voltage" class="theme-opt">
+            <span class="swatch sw-voltage"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Voltage</span>
+            <span class="desc">Acid lime · code rain</span>
+          </button>
+          <button type="button" role="option" data-theme-set="electric" class="theme-opt">
+            <span class="swatch sw-electric"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Electric</span>
+            <span class="desc">Volt yellow · cyan spark</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-controls="drawer">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ DRAWER ============ -->
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-inner">
+    <form class="drawer-search" role="search" action="../../search.html" method="get">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" name="q" placeholder="Search…" aria-label="Search" />
+    </form>
+
+    <div class="drawer-group">
+      <span class="drawer-label">// Navigate</span>
+      <a href="../../index.html">Home</a>
+      <a href="../../search.html">Blog</a>
+      <a href="#support-toggle">Support</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="drawer-group">
+      <span class="drawer-label">// Games</span>
+      <a href="../games.html">All Games</a>
+      <a href="../action/action.html">Action</a>
+      <a href="racing.html">Racing</a>
+      <a href="../simulation/simulation.html">Simulation</a>
+    </div>
+
+    <div class="drawer-group">
+      <span class="drawer-label">// Apps</span>
+      <a href="../../apps/apps.html">All Apps</a>
+      <a href="../../apps/tools/tools.html">Tools</a>
+      <a href="../../apps/media/media.html">Media</a>
+    </div>
+  </div>
+</aside>
+<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+<main id="main">
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="../games.html">Games</a>
+      <span class="sep">/</span>
+      <a href="racing.html">Racing</a>
+      <span class="sep">/</span>
+      <span>CarX Street</span>
+    </nav>
+
+    <div class="page-head-row">
+      <div>
+        <span class="kicker">// Racing · Open World</span>
+        <h1 class="page-title">CarX <span class="accent">Street</span></h1>
+        <p class="page-lede">
+          Open-world drift racing for Android and iOS. Deep customization,
+          realistic physics, day/night cycle and multiplayer.
+        </p>
+      </div>
+      <div class="page-head-stat">
+        <b>Latest</b>
+        <span>Version</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERO COVER ============ -->
+<section class="wrap">
+  <div class="detail-cover parent-cool-border">
+    <img src="../../images/carx-image-2.jpg" alt="CarX Street" />
+  </div>
+</section>
+
+<!-- ============ DESCRIPTION ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// About</span>
+      <h2>Story &amp; gameplay</h2>
+    </div>
+  </header>
+
+  <div class="prose">
+    <p>
+      CarX Drift Racing: Street (commonly referred to as CarX Street) is an open-world
+      racing game developed by CarX Technologies, blending high-speed street racing with
+      deep customization and realistic driving mechanics. It's designed for fans of
+      arcade racing and car enthusiasts who enjoy immersive gameplay and competitive
+      racing dynamics.
+    </p>
+  </div>
+
+  <div class="warn-box">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <div>
+      <strong>Warning.</strong> You may spend hours playing this game.
+      Be sure to take periodic breaks.
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: OPEN WORLD ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Features</span>
+      <h2>Open-world exploration</h2>
+    </div>
+  </header>
+
+  <div class="detail-cover parent-cool-border" style="margin-bottom: 1.5rem;">
+    <img src="../../images/carx-image-3.jpg" alt="CarX Street open world" loading="lazy" />
+  </div>
+
+  <div class="prose">
+    <p>
+      Players can freely roam a sprawling urban environment featuring highways, city
+      streets, and winding mountain roads — providing a diverse landscape for racing and
+      exploration. This expansive setting encourages players to discover hidden shortcuts,
+      secret locations, and unique drift zones that enhance their racing strategies and
+      overall experience. The freedom to navigate through various terrains — from bustling
+      downtown areas to serene countryside routes — adds depth to the gameplay, allowing
+      players to engage in spontaneous races or simply enjoy the scenery.
+    </p>
+    <p>
+      The world includes a dynamic day-night cycle, adding visual variety and challenges
+      to races. As the sun sets and the city lights begin to twinkle, players must adapt
+      to changing visibility conditions and altered road dynamics. Nighttime racing
+      introduces new elements, such as illuminated streets and neon signs, creating a
+      vibrant atmosphere that enhances the thrill of competition. Additionally, weather
+      effects can also play a role, influencing traction and handling, which further tests
+      players' skills and decision-making in real-time. This immersive environment ensures
+      that no two races are ever the same, keeping the gameplay fresh and exciting.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FEATURE: INTENSE RACING ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Features</span>
+      <h2>Intense racing gameplay</h2>
+    </div>
+  </header>
+
+  <div class="detail-cover parent-cool-border" style="margin-bottom: 1.5rem;">
+    <img src="../../images/carx-image-4.jpg" alt="CarX Street racing" loading="lazy" />
+  </div>
+
+  <div class="prose">
+    <p>
+      Offers various modes, including street racing, drift challenges, and time trials —
+      catering to a wide range of racing preferences and skill levels. Players can engage
+      in high-stakes street races against AI competitors or friends, showcasing their speed
+      and strategy. Drift challenges allow players to hone their skills in precision
+      driving, encouraging them to master the art of drifting around corners while earning
+      points for style and technique. Time trials add an element of competition against the
+      clock, pushing players to achieve their best times on meticulously designed tracks.
+      Each mode presents unique challenges and rewards, ensuring that players remain engaged
+      and motivated to improve their racing prowess.
+    </p>
+    <p>
+      Realistic driving physics and responsive controls provide an authentic racing
+      experience that immerses players in the thrill of high-speed competition. The game's
+      physics engine accurately simulates vehicle dynamics, allowing players to feel the
+      weight and handling of their cars as they navigate sharp turns and accelerate down
+      straightaways. This attention to detail enhances the overall gameplay, as players must
+      adapt their driving techniques based on their vehicle's characteristics and the
+      conditions of the track. The responsive controls ensure that every input feels
+      intuitive and precise, enabling players to execute complex maneuvers with confidence.
+      This combination of realism and responsiveness not only heightens the excitement of
+      each race but also fosters a deeper connection between the player and their vehicle,
+      making every victory feel truly earned.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FEATURE: CAR COLLECTION ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Features</span>
+      <h2>Diverse car collection</h2>
+    </div>
+  </header>
+
+  <div class="detail-cover parent-cool-border" style="margin-bottom: 1.5rem;">
+    <img src="../../images/carx-image-5.jpg" alt="CarX Street cars" loading="lazy" />
+  </div>
+
+  <div class="prose">
+    <p>
+      The game features a wide range of vehicles, from classic sports cars to modern
+      supercars, each with unique handling characteristics that cater to different racing
+      styles. Players can select from an extensive lineup of iconic models, allowing them
+      to experience the charm of vintage cars alongside the cutting-edge performance of
+      today's supercars.
+    </p>
+    <p>
+      Each vehicle is meticulously designed to reflect its real-world counterpart, with
+      distinct driving dynamics that enhance the gameplay. Whether it's the nimble handling
+      of a lightweight coupe or the brute force of a muscle car, players can experiment to
+      find the perfect fit for their racing style.
+    </p>
+    <p>
+      The game also encourages players to build their dream garage by unlocking new vehicles
+      through achievements or in-game currency, adding an element of progression and
+      excitement. With regular updates introducing new models, the collection remains fresh,
+      providing endless opportunities for exploration and competition in the world of
+      automotive performance.
+    </p>
+  </div>
+</section>
+
+<!-- ============ FEATURE: MULTIPLAYER ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Features</span>
+      <h2>Online multiplayer</h2>
+    </div>
+  </header>
+
+  <div class="detail-cover parent-cool-border" style="margin-bottom: 1.5rem;">
+    <img src="../../images/carx-image-6.jpg" alt="CarX Street multiplayer" loading="lazy" />
+  </div>
+
+  <div class="prose">
+    <p>
+      Players can compete against others in real-time multiplayer modes, showcasing their
+      driving skills and customized cars. This dynamic environment fosters a competitive
+      spirit as racers from around the world challenge each other on various tracks,
+      creating thrilling head-to-head matchups. Additionally, players can join or create
+      racing clubs, allowing them to team up with friends or like-minded enthusiasts for
+      cooperative events and tournaments, further enhancing the social aspect of the game.
+      With leaderboards tracking performance and achievements, players are motivated to
+      improve their skills and climb the ranks, making every race an opportunity for glory.
+    </p>
+  </div>
+</section>
+
+<!-- ============ SPECS + DOWNLOAD ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Download</span>
+      <h2>Get the game</h2>
+    </div>
+  </header>
+
+  <div class="specs">
+    <table>
+      <tbody>
+        <tr><th>Name</th><td>CarX Street</td></tr>
+        <tr><th>Requires</th><td>Android 9.0+ · iOS 12+</td></tr>
+        <tr><th>Genre</th><td>Racing · Open World · Drift</td></tr>
+        <tr><th>Developer</th><td>CarX Technologies</td></tr>
+        <tr><th>Platform</th><td>Android · iOS</td></tr>
+        <tr><th>Price</th><td>Free</td></tr>
+        <tr><th>In-App purchases</th><td><span style="color: var(--accent); font-weight: 700;">✓ Yes</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn-box">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <div>
+      <strong>Official download.</strong> CarX Street is available on the Google Play Store and Apple App Store.
+      Grab it from there for the safest, auto-updating install.
+    </div>
+  </div>
+
+  <div class="dl-row">
+    <a href="https://play.google.com/store/apps/details?id=com.carxtech.sr" class="dl-btn" target="_blank" rel="noopener">
+      <i class="fa-brands fa-google-play"></i> Google Play
+    </a>
+    <a href="https://apps.apple.com/app/carx-street/id1556561656" class="dl-btn alt" target="_blank" rel="noopener">
+      <i class="fa-brands fa-app-store-ios"></i> App Store
+    </a>
+  </div>
+
+  <div class="prose">
+    <h3>Install instructions</h3>
+    <ol>
+      <li>Tap <strong>Google Play</strong> or <strong>App Store</strong> above — whichever matches your device.</li>
+      <li>Install the game as you would any other app from your store.</li>
+      <li>Launch and complete the tutorial to unlock your first car.</li>
+      <li>Sign in with a CarX account to keep progress synced across devices and unlock multiplayer.</li>
+    </ol>
+
+    <div class="tutorial-cta">
+      <i class="fa-solid fa-list-check"></i>
+      <div>
+        <strong>Want to drift better?</strong>
+        Check out our <a href="../../blog/carx-drift-tips.html">CarX Street drift tips</a> —
+        seven things that actually work, from a rookie to podium.
+      </div>
+    </div>
+
+    <p>
+      Verified across multiple devices. Follow the steps carefully and it will work.
+    </p>
+  </div>
+
+  <div class="div-brokenlink">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Broken link? Game not working? Any other problem?
+    <a href="#contact">Reach out to us!</a>
+  </div>
+</section>
+
+<!-- ============ ALSO TRY ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Also Try</span>
+      <h2>More racing and action</h2>
+    </div>
+    <a class="view-all" href="racing.html">All racing games <i class="fa-solid fa-arrow-right"></i></a>
+  </header>
+
+  <div class="grid grid-3 parent-cool-border">
+
+    <!-- N.O.V.A 3 -->
+    <article class="card reveal">
+      <a class="card-link" href="../action/nova3.html">
+        <div class="thumb">
+          <img src="../../images/nova3-image-1.jpg" alt="N.O.V.A 3" loading="lazy" />
+          <span class="badge">Action</span>
+        </div>
+        <div class="body">
+          <h3 class="title">N.O.V.A 3</h3>
+          <p class="desc">The most immersive sci-fi FPS franchise on mobile. Fight for humankind across 10 levels and 12-player battles.</p>
+          <div class="tag-row">
+            <span class="tag-chip">fps</span>
+            <span class="tag-chip">sci-fi</span>
+            <span class="tag-chip">gameloft</span>
+          </div>
+          <div class="meta">
+            <span>v1.0.8e</span>
+            <span class="ver">Free</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- N.O.V.A 2 -->
+    <article class="card reveal">
+      <a class="card-link" href="../action/nova2.html">
+        <div class="thumb">
+          <img src="../../images/nova2-image-1.jpg" alt="N.O.V.A 2" loading="lazy" />
+          <span class="badge">Action</span>
+        </div>
+        <div class="body">
+          <h3 class="title">N.O.V.A 2</h3>
+          <p class="desc">12 chapters, a dozen weapons, three special powers and an epic campaign on the colonies of Scorpius.</p>
+          <div class="tag-row">
+            <span class="tag-chip">fps</span>
+            <span class="tag-chip">sci-fi</span>
+            <span class="tag-chip">classic</span>
+          </div>
+          <div class="meta">
+            <span>v1.0.5</span>
+            <span class="ver">Free</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Sky Combat -->
+    <article class="card reveal">
+      <a class="card-link" href="../action/skycombat.html">
+        <div class="thumb">
+          <img src="../../images/skycombat-image-1.jpg" alt="Sky Combat" loading="lazy" />
+          <span class="badge">Action</span>
+        </div>
+        <div class="body">
+          <h3 class="title">Sky Combat</h3>
+          <p class="desc">Realistic aircraft combat with physics, three maps and fighters from the MiG-19 to the Su-57.</p>
+          <div class="tag-row">
+            <span class="tag-chip">war</span>
+            <span class="tag-chip">pvp</span>
+            <span class="tag-chip">flight</span>
+          </div>
+          <div class="meta">
+            <span>v1.0.8e</span>
+            <span class="ver">Free + IAP</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="wrap">
+  <div class="cta-panel reveal">
+    <span class="kicker">// Support Us</span>
+    <h2>Keep the Rock Alive</h2>
+    <p>Every download, share and donation keeps GameRock running.<br />You can support us how it fits you and follow our socials.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="#support-toggle">Support Us</a>
+      <a class="btn btn-ghost" href="#contact">Contact</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html">
+          <img class="logo" src="../../images/gr-logo-1.png">
+          <span class="brand-text"><b>GAME</b><i>ROCK</i></span>
+        </a>
+        <p>The pride rock for all games, apps and modding tools. Built for gamers, by gamers.</p>
+      </div>
+
+      <div>
+        <h4>Games</h4>
+        <a href="../action/action.html">Action</a>
+        <a href="racing.html">Racing</a>
+        <a href="../simulation/simulation.html">Simulation</a>
+        <a href="../games.html">All Games</a>
+      </div>
+
+      <div>
+        <h4>Apps</h4>
+        <a href="../../apps/tools/tools.html">Tools</a>
+        <a href="../../apps/media/media.html">Media</a>
+        <a href="../../apps/apps.html">All Apps</a>
+        <a href="../../search.html">Search</a>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="#support-toggle">Support Us</a>
+        <a href="../../privacy.html">Privacy Policy</a>
+        <a href="../../terms.html">Terms of Service</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> GAMEROCK — ALL RIGHTS RESERVED</span>
+      <div id="contact">
+        <h4>Contact</h4>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100063468581803" aria-label="Facebook" rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/+2349035427684" aria-label="WhatsApp" rel="noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="X" target="_blank" rel="noopener" class="disabled-link"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener" class="disabled-link"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="mailto:otomee357@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-attribution">
+      Designed and developed by <a href="https://akthomee.com.ng/" target="_blank" rel="noopener">Akthomee</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ RADIAL MENU ============ -->
+<div class="radial-menu">
+  <input type="checkbox" id="radial-toggle" hidden />
+
+  <label for="radial-toggle" class="radial-trigger" aria-label="Open quick menu">
+    <i class="fa-solid fa-plus"></i>
+  </label>
+
+  <nav class="radial-nav" style="--n: 6;">
+    <a href="#main" class="radial-item tip-bottom" style="--i: 0;" title="back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="https://wa.me/+2349035427684" class="radial-item tip-bottom" style="--i: 1;" title="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="mailto:otomee357@gmail.com" class="radial-item tip-bottom" style="--i: 2;" title="feedback"><i class="fa-solid fa-comment-dots"></i></a>
+    <a href="#support-toggle" class="radial-item tip-bottom disabled-link" style="--i: 3;" title="support us"><i class="fa-solid fa-heart"></i></a>
+    <a href="../../faqs.html" class="radial-item tip-bottom" style="--i: 4;" title="FAQs"><i class="fa-solid fa-circle-question"></i></a>
+    <a href="#search" class="radial-item tip-bottom" style="--i: 5;" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+  </nav>
+</div>
+
+<!-- ============ SUPPORT MODAL ============ -->
+<input type="checkbox" id="support-toggle" hidden />
+
+<div class="modal-overlay" id="support-modal">
+  <label for="support-toggle" class="modal-close" aria-label="Close"></label>
+
+  <div class="modal-panel" role="dialog" aria-labelledby="support-title">
+    <label for="support-toggle" class="modal-x" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </label>
+
+    <span class="kicker">// Support Us</span>
+    <h2 id="support-title">Keep the Rock Alive</h2>
+    <p class="modal-lede">Every download, share and donation keeps GameRock running. Pick whichever way suits you.</p>
+
+    <div class="support-section">
+      <h3><i class="fa-solid fa-share-nodes"></i> Follow &amp; Share</h3>
+      <div class="support-socials">
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063468581803" aria-label="Facebook" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://wa.me/+2349035427684" aria-label="WhatsApp" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="support-section">
+      <h3><i class="fa-solid fa-coins"></i> Donate with TON</h3>
+      <p>Copy our wallet address and send any amount:</p>
+      <code class="ton-address">UQAZtKzrroqz5m9LIdr1KZySRnr3Z5vVpMstlr9TlBE8q5j-</code>
+    </div>
+
+    <div class="support-section">
+      <h3><i class="fa-solid fa-naira-sign"></i> Donate in Naira</h3>
+      <p>Send any amount to our Nigerian account:</p>
+      <div class="bank-card">
+        <div class="bank-row">
+          <span class="bank-label">Bank</span>
+          <span class="bank-value">POCKETAPP</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Account Name</span>
+          <span class="bank-value">PIGGYVEST/AKPOTOME ALLEN OGADJE</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Account Number</span>
+          <span class="bank-value bank-number">9696110446</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-notice">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Wish to donate with something different? Kindly <a href="#contact" class="contact-link">contact us</a> below</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
