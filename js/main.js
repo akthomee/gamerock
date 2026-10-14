@@ -264,12 +264,7 @@
   revealAll();
 })();
 
-document.querySelectorAll('a[href="#support-toggle"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.getElementById('support-toggle').click();
-  });
-});
+
 
 document.querySelectorAll('.notice-link').forEach(link => {
   link.addEventListener('click', () => {
@@ -279,14 +274,16 @@ document.querySelectorAll('.notice-link').forEach(link => {
 });
 
 /* ---------- ISOTOPE FILTER (games.html) ---------- */
-const filterPills = document.querySelectorAll('.filter-pills .pill');
-const gamesGrid = document.getElementById('gamesGrid');
-const filterSearch = document.getElementById('filterSearch');
-const filterCount = document.getElementById('filterCount');
-const filterEmpty = document.getElementById('filterEmpty');
-const filterReset = document.getElementById('filterReset');
+function bindIsotopeFilter() {
+  const filterPills = document.querySelectorAll('.filter-pills .pill');
+  const gamesGrid = document.getElementById('gamesGrid');
+  const filterSearch = document.getElementById('filterSearch');
+  const filterCount = document.getElementById('filterCount');
+  const filterEmpty = document.getElementById('filterEmpty');
+  const filterReset = document.getElementById('filterReset');
 
-if (gamesGrid && filterPills.length) {
+  if (!gamesGrid || !filterPills.length) return;
+
   const cards = Array.from(gamesGrid.querySelectorAll('.card'));
   let activeCat = 'all';
   let activeQuery = '';
@@ -294,33 +291,20 @@ if (gamesGrid && filterPills.length) {
   function applyFilter() {
     const q = activeQuery.toLowerCase().trim();
     let visible = 0;
-
     cards.forEach(card => {
       const cat = card.dataset.category || '';
       const name = (card.dataset.name || '').toLowerCase();
-      const catMatch = activeCat === 'all' || cat === activeCat;
-      const queryMatch = !q || name.includes(q);
-      const show = catMatch && queryMatch;
-
+      const show = (activeCat === 'all' || cat === activeCat) && (!q || name.includes(q));
       card.hidden = !show;
       if (show) visible++;
     });
-
-    if (filterCount) {
-      filterCount.textContent = `Showing ${visible} of ${cards.length} games`;
-    }
-    if (filterEmpty) {
-      filterEmpty.hidden = visible > 0;
-    }
+    if (filterCount) filterCount.textContent = `Showing ${visible} of ${cards.length} games`;
+    if (filterEmpty) filterEmpty.hidden = visible > 0;
   }
 
-  // Category pills
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
-      filterPills.forEach(p => {
-        p.classList.remove('active');
-        p.setAttribute('aria-selected', 'false');
-      });
+      filterPills.forEach(p => { p.classList.remove('active'); p.setAttribute('aria-selected', 'false'); });
       pill.classList.add('active');
       pill.setAttribute('aria-selected', 'true');
       activeCat = pill.dataset.filter || 'all';
@@ -328,19 +312,12 @@ if (gamesGrid && filterPills.length) {
     });
   });
 
-  // Name search
   if (filterSearch) {
-    filterSearch.addEventListener('input', e => {
-      activeQuery = e.target.value;
-      applyFilter();
-    });
+    filterSearch.addEventListener('input', e => { activeQuery = e.target.value; applyFilter(); });
   }
-
-  // Reset button
   if (filterReset) {
     filterReset.addEventListener('click', () => {
-      activeCat = 'all';
-      activeQuery = '';
+      activeCat = 'all'; activeQuery = '';
       if (filterSearch) filterSearch.value = '';
       filterPills.forEach(p => {
         p.classList.toggle('active', p.dataset.filter === 'all');
@@ -351,6 +328,10 @@ if (gamesGrid && filterPills.length) {
   }
 
   applyFilter();
+}
+
+bindIsotopeFilter();
+document.addEventListener('gamerock:rendered', bindIsotopeFilter);
 
   /* ---------- CATEGORY JUMP (scroll to filter + select pill) ---------- */
 const jumpTiles = document.querySelectorAll('[data-jump-filter]');
@@ -371,5 +352,4 @@ if (jumpTiles.length && catalogSection && filterPills.length) {
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
-}
 }
