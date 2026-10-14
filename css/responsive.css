@@ -1,69 +1,57 @@
-@media screen and (min-width: 1024px) {
-    .label-container {
-        display: none;
-    }
-    .nav {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        top: 0px;
-        background: transparent;
-        overflow: visible;
+/* ============================================================
+   GAMEROCK 2.0 — responsive.css
+   ============================================================ */
 
-    }
+@media (min-width: 1600px) { :root { --maxw: 1440px; } }
 
-    .container {
-        width: 69%;
-        overflow: visible;
-        height: 100%;
-    }
+@media (max-width: 1200px) {
+  .grid-4 { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
 
-    .nav > a {
-        display: inline;
-    }
+@media (max-width: 960px) {
+  :root { --header-h: 62px; }
+  .header-search { display: none; }
+  .nav .nav-link, .nav .has-drop { display: none; }
+  .menu-toggle { display: grid; margin-left: .4rem; }
+  .hero { padding-top: 3rem; }
+  .hero-title { font-size: clamp(2.4rem, 8vw, 4rem); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
 
-    .btn-1-top, .btn-2-top {
-        display: inline;
-    }
+@media (max-width: 640px) {
+  :root { --gutter: 1rem; --radius-lg: 10px; }
+  .hero-badge { font-size: .64rem; padding: .32rem .7rem; letter-spacing: .22em; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); }
+  .search-hero { border-radius: var(--radius); }
+  .search-row input { height: 48px; font-size: .95rem; }
+  .search-controls { grid-template-columns: 1fr 1fr; }
+  .search-controls .btn-search { grid-column: 1 / -1; }
+  .btn-search { height: 42px; font-size: .76rem; padding: 0 1.2rem; }
+  .grid, .grid-3, .grid-4 { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .9rem; }
+  .card .title { font-size: .9rem; }
+  .card .desc { font-size: .78rem; }
+  .hud-grid { grid-template-columns: repeat(2, 1fr); gap: .7rem; }
+  .hud-tile { padding: 1.1rem .9rem; }
+  .hud-tile h3 { font-size: .88rem; }
+  .hud-tile p { font-size: .64rem; }
+  .hud-ic { font-size: 1.35rem; margin-bottom: .65rem; }
+  .section-head { margin-bottom: 1.5rem; }
+  .section-head h2 { font-size: 1.3rem; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.4rem; margin-bottom: 1.8rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .cta-actions { flex-direction: column; }
+  .cta-actions .btn { width: 100%; justify-content: center; }
+  .hide-sm { display: none; }
+}
 
-    .btn-1-body, .btn-2-body {
-        height: 0;
-        transition: height 1s;
-        top: 60px;
-        margin: 0;
-        z-index: 99;
-        position: absolute;
-        background:linear-gradient(to right bottom, #ffdeb4, #4a7ea0);
-        border-radius: 5px;
-    }
-   
-    #btn-1:hover > .btn-1-body {
-        height: 90px;
-    }
+@media (max-width: 380px) {
+  .hud-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr; }
+  .brand-text {  font-size: 20px; }
+}
 
-    #btn-2:hover > .btn-2-body {
-        height: 90px;
-    }
-
-    .gametools-wrapper {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .gametools-wrapper > a:nth-child(3n+1) {
-	border: 0px solid blue;
-	grid-column: 1;
-    }
-
-    .gametools-wrapper > a:nth-child(3n+2) {
-	border: 0px solid rgb(30, 104, 7);
-	grid-column: 2;
-    }
-
-    .gametools-wrapper > a:nth-child(3n) {
-	border: 0px solid rgb(255, 0, 0);
-	grid-column: 3;
-    }
-
-    
-     }
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero { padding: 2rem 0; }
+  .hero-title { font-size: clamp(2rem, 6vw, 3rem); }
+  .hero-stats { display: none; }
+}
