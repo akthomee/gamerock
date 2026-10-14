@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberdeck">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BlackHole — All-in-One Media Downloader | GameRock</title>
+<meta name="description" content="Download BlackHole APK — a handy multimedia app that downloads videos from any social platform and extracts audio at top quality. Ad-free, open-source." />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:title" content="BlackHole — All-in-One Media Downloader" />
+<meta property="og:description" content="Download videos from any social platform and extract audio at top quality. Ad-free, open-source." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gamerock.com.ng/apps/media/blackhole.html" />
+<meta property="og:image" content="https://gamerock.com.ng/images/blackhole-image-1.jpg" />
+<link rel="canonical" href="https://gamerock.com.ng/apps/media/blackhole.html" />
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('gr-theme') || 'cyberdeck';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<link rel="stylesheet" href="../../css/style.css" />
+<link rel="stylesheet" href="../../css/responsive.css" />
+
+<script src="../../js/main.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://gamerock.com.ng/gr-logo-1.png" />
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025861444505003" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS58RYFRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FLS58RYFRR');
+</script>
+</head>
+
+<body data-page="blackhole">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-motes" id="bg-motes"></div>
+  <div class="bg-sun"></div>
+  <div class="bg-rain" id="bg-rain"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../../index.html" aria-label="GameRock — home">
+      <img class="logo" src="../../images/gr-logo-1.png">
+      <span class="brand-text"><b>GAME</b><i>ROCK</i></span>
+    </a>
+
+    <form class="header-search" role="search" action="../../search.html" method="get" autocomplete="off">
+      <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" name="q" placeholder="Search games, apps, tags…" aria-label="Search" />
+      <kbd>/</kbd>
+    </form>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link" href="../../index.html">Home</a>
+
+      <div class="has-drop">
+        <button class="nav-link" type="button">
+          Games <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="drop" role="menu">
+          <a role="menuitem" href="../games/games.html">All Games</a>
+          <a role="menuitem" href="../games/action/action.html">Action</a>
+          <a role="menuitem" href="../games/racing/racing.html">Racing</a>
+          <a role="menuitem" href="../games/simulation/simulation.html">Simulation</a>
+        </div>
+      </div>
+
+      <div class="has-drop">
+        <button class="nav-link" type="button">
+          Apps <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="drop" role="menu">
+          <a role="menuitem" href="../apps.html">All Apps</a>
+          <a role="menuitem" href="../game-tools/game-tools.html">Tools</a>
+          <a role="menuitem" href="media.html">Media</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="#support-toggle">Support</a>
+
+      <div class="theme-picker" id="theme-picker">
+        <button class="icon-btn theme-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Change theme">
+          <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="theme-menu" role="listbox" aria-label="Choose theme">
+          <button type="button" role="option" data-theme-set="cyberdeck" class="theme-opt">
+            <span class="swatch sw-cyberdeck"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Cyberdeck</span>
+            <span class="desc">Neon cyan · deep space</span>
+          </button>
+          <button type="button" role="option" data-theme-set="daylight" class="theme-opt">
+            <span class="swatch sw-daylight"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Daylight</span>
+            <span class="desc">Clean light · corporate</span>
+          </button>
+          <button type="button" role="option" data-theme-set="synthwave" class="theme-opt">
+            <span class="swatch sw-synthwave"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Synthwave</span>
+            <span class="desc">80s magenta · retro</span>
+          </button>
+          <button type="button" role="option" data-theme-set="voltage" class="theme-opt">
+            <span class="swatch sw-voltage"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Voltage</span>
+            <span class="desc">Acid lime · code rain</span>
+          </button>
+          <button type="button" role="option" data-theme-set="electric" class="theme-opt">
+            <span class="swatch sw-electric"><i class="fa-solid fa-check"></i></span>
+            <span class="name">Electric</span>
+            <span class="desc">Volt yellow · cyan spark</span>
+          </button>
+        </div>
+      </div>
+
+      <button class="icon-btn menu-toggle" type="button" aria-label="Open menu" aria-controls="drawer">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ DRAWER ============ -->
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-inner">
+    <form class="drawer-search" role="search" action="../../search.html" method="get">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" name="q" placeholder="Search…" aria-label="Search" />
+    </form>
+
+    <div class="drawer-group">
+      <span class="drawer-label">// Navigate</span>
+      <a href="../../index.html">Home</a>
+      <a href="../../search.html">Blog</a>
+      <a href="#support-toggle">Support</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="drawer-group">
+      <span class="drawer-label">// Games</span>
+      <a href="../games/games.html">All Games</a>
+      <a href="../games/action/action.html">Action</a>
+      <a href="../games/racing/racing.html">Racing</a>
+      <a href="../games/simulation/simulation.html">Simulation</a>
+    </div>
+
+    <div class="drawer-group">
+      <span class="drawer-label">// Apps</span>
+      <a href="../apps.html">All Apps</a>
+      <a href="../game-tools/game-tools.html">Tools</a>
+      <a href="media.html">Media</a>
+    </div>
+  </div>
+</aside>
+<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+<main id="main">
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="../apps.html">Apps</a>
+      <span class="sep">/</span>
+      <a href="media.html">Media</a>
+      <span class="sep">/</span>
+      <span>BlackHole</span>
+    </nav>
+
+    <div class="page-head-row">
+      <div>
+        <span class="kicker">// Media · Downloader</span>
+        <h1 class="page-title">Black<span class="accent">Hole</span></h1>
+        <p class="page-lede">
+          All-in-one media downloader — grab videos from any social platform and
+          extract audio at top quality. Ad-free, open-source.
+        </p>
+      </div>
+      <div class="page-head-stat">
+        <b>v35</b>
+        <span>Version</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERO COVER ============ -->
+<section class="wrap">
+  <div class="detail-cover parent-cool-border">
+    <img src="../../images/blackhole-image-1.jpg" alt="BlackHole" />
+  </div>
+</section>
+
+<!-- ============ DESCRIPTION ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// About</span>
+      <h2>What BlackHole is about</h2>
+    </div>
+  </header>
+
+  <div class="prose">
+    <p>
+      BlackHole by fawazapp is a handy multimedia app that makes downloading videos from
+      any social media platform a breeze. With just a simple paste of the video link,
+      users can effortlessly grab their favorite content without any hassle.
+    </p>
+    <p>
+      Not only does it allow for easy video downloads, but it also features an audio
+      extraction tool that lets you remove sound from videos while maintaining top-notch
+      quality. Available for Android, iOS, and PC, BlackHole offers an ad-free experience
+      and supports offline playback — perfect for on-the-go entertainment.
+    </p>
+    <p>
+      Plus, being open-source, it's a great choice for anyone who values both functionality
+      and simplicity in their media management.
+    </p>
+  </div>
+
+  <div class="detail-cover parent-cool-border" style="margin-top: 1.5rem;">
+    <img src="../../images/blackhole-image-2.jpg" alt="BlackHole interface" loading="lazy" />
+  </div>
+</section>
+
+<!-- ============ SPECS + DOWNLOAD ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Download</span>
+      <h2>Get the app</h2>
+    </div>
+  </header>
+
+  <div class="specs">
+    <table>
+      <tbody>
+        <tr><th>Name</th><td>BlackHole</td></tr>
+        <tr><th>Version</th><td>35</td></tr>
+        <tr><th>Size</th><td>18 MB</td></tr>
+        <tr><th>Platform</th><td>Android · iOS · PC</td></tr>
+        <tr><th>Package</th><td><code>com.fawazapp.blackhole</code></td></tr>
+        <tr><th>Requires</th><td>Android 7.0+</td></tr>
+        <tr><th>Category</th><td>Apps › Media</td></tr>
+        <tr><th>Price</th><td>Free</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn-box">
+    <i class="fa-solid fa-triangle-exclamation"></i>
+    <div>
+      <strong>Heads-up on redirects.</strong> After tapping the APK download, complete
+      the captcha and proceed with the generated download link. If redirects appear,
+      ignore them with your browser's back button. Allow
+      <em>Install from unknown sources</em> before the APK will install.
+    </div>
+  </div>
+
+  <div class="dl-row">
+    <a href="https://up-4.net/d/xnNK" class="dl-btn" target="_blank" rel="noopener">
+      <i class="fa-solid fa-download"></i> Download APK
+    </a>
+  </div>
+
+  <div class="prose">
+    <h3>Install instructions</h3>
+    <ol>
+      <li>Download the APK using the button above.</li>
+      <li>Ignore any redirects and pop-ups — use the back button to return to the download page.</li>
+      <li>Complete the captcha countdown and proceed to the generated download link.</li>
+      <li>Enable <em>Install from unknown sources</em> in your device settings.</li>
+      <li>Install and open BlackHole.</li>
+      <li>Paste any video link from a social platform and tap download — BlackHole handles the rest.</li>
+    </ol>
+  </div>
+
+  <div class="div-brokenlink">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Broken link? App not working? Any other problem?
+    <a href="#contact">Reach out to us!</a>
+  </div>
+</section>
+
+<!-- ============ SHARE ============ -->
+<section class="wrap">
+  <div class="share-row">
+    <span class="lbl">Share on:</span>
+    <a class="share-btn" href="https://api.whatsapp.com/send?text=https%3A%2F%2Fgamerock.com.ng%2Fapps%2Fmedia%2Fblackhole.html" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a class="share-btn" href="#" aria-label="Share on TikTok">
+      <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://gamerock.com.ng/apps/media/blackhole.html" target="_blank" rel="noopener" aria-label="Share on Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fgamerock.com.ng%2Fapps%2Fmedia%2Fblackhole.html&text=Check%20out%20BlackHole!" target="_blank" rel="noopener" aria-label="Share on X">
+      <i class="fa-brands fa-x-twitter"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ============ RELATED ============ -->
+<section class="wrap">
+  <header class="section-head">
+    <div>
+      <span class="kicker">// Related</span>
+      <h2>Other media apps</h2>
+    </div>
+    <a class="view-all" href="media.html">All media <i class="fa-solid fa-arrow-right"></i></a>
+  </header>
+
+  <div class="grid grid-3 parent-cool-border">
+
+    <!-- FzStudioX -->
+    <article class="card reveal">
+      <a class="card-link" href="fzstudios.html">
+        <div class="thumb">
+          <img src="../../images/fz-img-0.jpg" alt="FzStudioX" loading="lazy" />
+          <span class="badge">Media</span>
+        </div>
+        <div class="body">
+          <h3 class="title">FzStudioX</h3>
+          <p class="desc">Download movies, TV series and anime from many sources. Play in any external player.</p>
+          <div class="tag-row">
+            <span class="tag-chip">movies</span>
+            <span class="tag-chip">tv</span>
+            <span class="tag-chip">anime</span>
+          </div>
+          <div class="meta">
+            <span>v3.4</span>
+            <span class="ver">Free</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- Free Music Downloader -->
+    <article class="card reveal">
+      <a class="card-link" href="music-downloader.html">
+        <div class="thumb">
+          <img src="../../images/music-d-image-1.jpg" alt="Free Music Downloader" loading="lazy" />
+          <span class="badge">Media</span>
+        </div>
+        <div class="body">
+          <h3 class="title">Free Music Downloader</h3>
+          <p class="desc">Search and download any song or YouTube video. Play offline anywhere. Completely free.</p>
+          <div class="tag-row">
+            <span class="tag-chip">music</span>
+            <span class="tag-chip">youtube</span>
+            <span class="tag-chip">offline</span>
+          </div>
+          <div class="meta">
+            <span>v1.1.9</span>
+            <span class="ver">Free</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+    <!-- MT Manager (tool, but useful crossover) -->
+    <article class="card reveal">
+      <a class="card-link" href="../game-tools/mt-manager.html">
+        <div class="thumb">
+          <img src="../../images/mt-image-1.jpg" alt="MT Manager" loading="lazy" />
+          <span class="badge">Tool</span>
+        </div>
+        <div class="body">
+          <h3 class="title">MT Manager</h3>
+          <p class="desc">Access restricted files, edit APKs, dex, xml, arsc and more. Root optional.</p>
+          <div class="tag-row">
+            <span class="tag-chip">file-manager</span>
+            <span class="tag-chip">apk-editor</span>
+            <span class="tag-chip">modding</span>
+          </div>
+          <div class="meta">
+            <span>v2.11.0</span>
+            <span class="ver">Free</span>
+          </div>
+        </div>
+      </a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="wrap">
+  <div class="cta-panel reveal">
+    <span class="kicker">// Support Us</span>
+    <h2>Keep the Rock Alive</h2>
+    <p>Every download, share and donation keeps GameRock running.<br />You can support us how it fits you and follow our socials.</p>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="#support-toggle">Support Us</a>
+      <a class="btn btn-ghost" href="#contact">Contact</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../index.html">
+          <img class="logo" src="../../images/gr-logo-1.png">
+          <span class="brand-text"><b>GAME</b><i>ROCK</i></span>
+        </a>
+        <p>The pride rock for all games, apps and modding tools. Built for gamers, by gamers.</p>
+      </div>
+
+      <div>
+        <h4>Games</h4>
+        <a href="../games/action/action.html">Action</a>
+        <a href="../games/racing/racing.html">Racing</a>
+        <a href="../games/simulation/simulation.html">Simulation</a>
+        <a href="../games/games.html">All Games</a>
+      </div>
+
+      <div>
+        <h4>Apps</h4>
+        <a href="../game-tools/game-tools.html">Tools</a>
+        <a href="media.html">Media</a>
+        <a href="../apps.html">All Apps</a>
+        <a href="../../search.html">Search</a>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <a href="#support-toggle">Support Us</a>
+        <a href="../../privacy.html">Privacy Policy</a>
+        <a href="../../terms.html">Terms of Service</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> GAMEROCK — ALL RIGHTS RESERVED</span>
+      <div id="contact">
+        <h4>Contact</h4>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100063468581803" aria-label="Facebook" rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/+2349035427684" aria-label="WhatsApp" rel="noopener" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="X" target="_blank" rel="noopener" class="disabled-link"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="TikTok" target="_blank" rel="noopener" class="disabled-link"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="mailto:otomee357@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-attribution">
+      Designed and developed by <a href="https://akthomee.com.ng/" target="_blank" rel="noopener">Akthomee</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ RADIAL MENU ============ -->
+<div class="radial-menu">
+  <input type="checkbox" id="radial-toggle" hidden />
+
+  <label for="radial-toggle" class="radial-trigger" aria-label="Open quick menu">
+    <i class="fa-solid fa-plus"></i>
+  </label>
+
+  <nav class="radial-nav" style="--n: 6;">
+    <a href="#main" class="radial-item tip-bottom" style="--i: 0;" title="back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    <a href="https://wa.me/+2349035427684" class="radial-item tip-bottom" style="--i: 1;" title="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="mailto:otomee357@gmail.com" class="radial-item tip-bottom" style="--i: 2;" title="feedback"><i class="fa-solid fa-comment-dots"></i></a>
+    <a href="#support-toggle" class="radial-item tip-bottom disabled-link" style="--i: 3;" title="support us"><i class="fa-solid fa-heart"></i></a>
+    <a href="../../faqs.html" class="radial-item tip-bottom" style="--i: 4;" title="FAQs"><i class="fa-solid fa-circle-question"></i></a>
+    <a href="#search" class="radial-item tip-bottom" style="--i: 5;" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+  </nav>
+</div>
+
+<!-- ============ SUPPORT MODAL ============ -->
+<input type="checkbox" id="support-toggle" hidden />
+
+<div class="modal-overlay" id="support-modal">
+  <label for="support-toggle" class="modal-close" aria-label="Close"></label>
+
+  <div class="modal-panel" role="dialog" aria-labelledby="support-title">
+    <label for="support-toggle" class="modal-x" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </label>
+
+    <span class="kicker">// Support Us</span>
+    <h2 id="support-title">Keep the Rock Alive</h2>
+    <p class="modal-lede">Every download, share and donation keeps GameRock running. Pick whichever way suits you.</p>
+
+    <div class="support-section">
+      <h3><i class="fa-solid fa-share-nodes"></i> Follow &amp; Share</h3>
+      <div class="support-socials">
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063468581803" aria-label="Facebook" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://wa.me/+2349035427684" aria-label="WhatsApp" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="support-section">
+      <h3><i class="fa-solid fa-coins"></i> Donate with TON</h3>
+      <p>Copy our wallet address and send any amount:</p>
+      <code class="ton-address">UQAZtKzrroqz5m9LIdr1KZySRnr3Z5vVpMstlr9TlBE8q5j-</code>
+    </div>
+
+    <div class="support-section">
+      <h3><i class="fa-solid fa-naira-sign"></i> Donate in Naira</h3>
+      <p>Send any amount to our Nigerian account:</p>
+      <div class="bank-card">
+        <div class="bank-row">
+          <span class="bank-label">Bank</span>
+          <span class="bank-value">POCKETAPP</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Account Name</span>
+          <span class="bank-value">PIGGYVEST/AKPOTOME ALLEN OGADJE</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Account Number</span>
+          <span class="bank-value bank-number">9696110446</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-notice">
+      <i class="fa-solid fa-circle-info"></i>
+      <p>Wish to donate with something different? Kindly <a href="#contact" class="notice-link">contact us</a> below</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
