@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberdeck">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Search — GameRock</title>
+<meta name="description" content="Search every game, app and tool on GameRock. Filter by name or tag, scoped to games, apps, or everything." />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:title" content="Search — GameRock" />
+<meta property="og:description" content="Search every game, app and tool on GameRock." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gamerock.com.ng/search.html" />
+<meta property="og:image" content="https://gamerock.com.ng/images/gr-logo-1.png" />
+<link rel="canonical" href="https://gamerock.com.ng/search.html" />
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('gr-theme') || 'cyberdeck';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+
+<script src="js/main.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://gamerock.com.ng/gr-logo-1.png" />
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025861444505003" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS58RYFRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FLS58RYFRR');
+</script>
+</head>
+
+<body data-page="search">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-motes" id="bg-motes"></div>
+  <div class="bg-sun"></div>
+  <div class="bg-rain" id="bg-rain"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<!-- header + drawer injected by injection.js -->
+
+<main id="main">
+
+<!-- ============ SEARCH BAR ============ -->
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span>Search</span>
+    </nav>
+
+    <div class="page-head-row">
+      <div>
+        <span class="kicker">// Search</span>
+        <h1 class="page-title">Find Your <span class="accent">Game</span></h1>
+        <p class="page-lede">
+          Search across every game, app and tool on GameRock.
+          Filter by name or tag, scoped to games, apps, or everything.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <form class="search-hero" id="search" action="search.html" method="get" autocomplete="off">
+    <div class="search-row">
+      <i class="fa-solid fa-magnifying-glass search-ic" aria-hidden="true"></i>
+      <input type="search" name="q" placeholder="Search games, apps, tools…" aria-label="Search query" />
+    </div>
+    <div class="search-controls">
+      <label class="select-wrap">
+        <span class="select-label">In</span>
+        <select name="scope" aria-label="Search scope">
+          <option value="all">Everything</option>
+          <option value="games">Games</option>
+          <option value="apps">Apps</option>
+        </select>
+      </label>
+      <label class="select-wrap">
+        <span class="select-label">By</span>
+        <select name="mode" aria-label="Search mode">
+          <option value="name">Name</option>
+          <option value="tag">Tag</option>
+        </select>
+      </label>
+      <button class="btn-search" type="submit">
+        Search <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </form>
+</section>
+
+<!-- ============ QUICK TAGS ============ -->
+<section class="wrap">
+  <div class="quick-tags" aria-label="Quick tag search">
+    <span class="qt-label">Popular</span>
+    <a class="tag-chip" href="search.html?mode=tag&q=fps">fps</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=racing">racing</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=gameloft">gameloft</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=multiplayer">multiplayer</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=downloader">downloader</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=modding">modding</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=virtual-machine">virtual-machine</a>
+    <a class="tag-chip" href="search.html?mode=tag&q=sandbox">sandbox</a>
+  </div>
+</section>
+
+<!-- ============ RESULTS (injected by search.js) ============ -->
+<!-- search.js inserts the results block here automatically -->
+
+</main>
+
+<!-- footer + radial menu + support modal injected by injection.js -->
+
+<!-- ============ SCRIPT BOOT ============ -->
+<script src="js/injection.js"></script>
+<script src="js/data.js"></script>
+<script src="js/injection-sections.js"></script>
+<script src="js/render.js"></script>
+<script src="js/search.js"></script>
+
+</body>
+</html>
