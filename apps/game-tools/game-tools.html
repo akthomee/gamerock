@@ -134,25 +134,51 @@
 <section class="wrap">
   <header class="section-head">
     <div>
-      <span class="kicker">// Workflow</span>
-      <h2>How the tools work together</h2>
+      <span class="kicker">// Overview</span>
+      <h2>What each tool is about</h2>
     </div>
   </header>
 
   <div class="prose">
     <p>
-      These four tools aren't competitors — they're a kit. Here's how a typical modding
-      workflow uses them:
+      Every tool in this category solves a different problem. Here's a quick
+      breakdown of what each one does.
     </p>
-    <ol>
-      <li><strong>F1 VM</strong> — install this first if your phone isn't rooted. It gives you a rooted Android environment to run the other tools in.</li>
-      <li><strong>GameGuardian</strong> — the actual value editor. Use it to search, modify and freeze game memory. Always launch it before the game.</li>
-      <li><strong>MT Manager</strong> — the file workhorse. Extract, edit, repack APKs, move OBB folders, patch dex or XML files.</li>
-      <li><strong>IL2CppDumper</strong> — the analyst. Dump a Unity game's compiled code to find the values you want to change.</li>
+    <ol style="list-style: decimal; padding-left: 1.4rem; color: var(--text-dim);">
+      <li>
+        <strong>VPhoneOS</strong> — a virtual machine that gives you a rooted Android 12
+        environment on any phone without rooting your device. Runs 32-bit games on modern
+        64-bit phones, supports Magisk without unlocking your bootloader, and lets you
+        run multiple VMs at once. The most capable virtual machine available.
+      </li>
+      <li>
+        <strong>F1 VM</strong> — a lighter virtual machine running Android 7 with built-in
+        root access. Simpler than VPhoneOS and works on older devices, but has an older
+        Android version and weaker 32-bit support. A solid alternative when VPhoneOS isn't
+        an option.
+      </li>
+      <li>
+        <strong>GameGuardian</strong> — the actual memory editor. Search for and change
+        values in a running game (coins, health, ammo, XP) using fuzzy searches, encrypted
+        value searches, Lua scripts, speedhack, or freezes. Works directly on rooted devices,
+        or inside a virtual machine on unrooted ones.
+      </li>
+      <li>
+        <strong>MT Manager</strong> — a powerful file manager and APK editor. Reaches files
+        Android normally hides, and can edit dex, xml, arsc, and hex without needing root.
+        Handles ZIP editing, APK signing, cloning, optimization, translation, and script
+        execution.
+      </li>
+      <li>
+        <strong>IL2CppDumper</strong> — a reverse-engineering tool for Unity games. Reads
+        the compiled IL2Cpp binaries of a game and produces a readable dump of class names,
+        method names, and field offsets — the map you need before you can change anything.
+      </li>
     </ol>
     <p>
-      Not every game needs all four. Start with GameGuardian — if you can find the value
-      directly, you're done. Reach for the others when you need to dig deeper.
+      Pick whichever tool matches what you're trying to do. VPhoneOS and F1 VM give you
+      a rooted environment. GameGuardian is for editing values. MT Manager is for files
+      and APKs. IL2CppDumper is for reading compiled game code.
     </p>
   </div>
 </section>
