@@ -298,7 +298,11 @@ function bindIsotopeFilter() {
       card.hidden = !show;
       if (show) visible++;
     });
-    if (filterCount) filterCount.textContent = `Showing ${visible} of ${cards.length} games`;
+    const noun = document.body.dataset.page === 'apps' ||
+             document.body.dataset.page === 'game-tools' ||
+             document.body.dataset.page === 'media'
+  ? 'apps' : 'games';
+if (filterCount) filterCount.textContent = `Showing ${visible} of ${cards.length} ${noun}`;
     if (filterEmpty) filterEmpty.hidden = visible > 0;
   }
 
@@ -327,7 +331,45 @@ function bindIsotopeFilter() {
     });
   }
 
-  applyFilter();
+  function applyFilter() {
+  let visible = 0;
+  cards.forEach(card => {
+    const cat = card.dataset.category || '';
+    const haystack = card.dataset.name || '';   // name + tags from render.js
+    const catMatch = activeCat === 'all' || cat === activeCat;
+    const queryMatch = grFuzzyMatch(activeQuery, haystack);
+    const show = catMatch && queryMatch;
+    card.hidden = !show;
+    if (show) visible++;
+  });
+
+  const noun = document.body.dataset.page === 'games' ||
+               document.body.dataset.page === 'action' ||
+               document.body.dataset.page === 'racing' ||
+               document.body.dataset.page === 'simulation' ? 'games' : 'apps';
+  if (filterCount) filterCount.textContent = `Showing ${visible} of ${cards.length} ${noun}`;
+  if (filterEmpty) filterEmpty.hidden = visible > 0;
+}
+}
+
+/* Fuzzy match helpers */
+function grNormalize(str) {
+  return (str || '').toString().toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+function grIsSubsequence(needle, haystack) {
+  let i = 0;
+  for (let j = 0; j < haystack.length && i < needle.length; j++) {
+    if (haystack[j] === needle[i]) i++;
+  }
+  return i === needle.length;
+}
+function grFuzzyMatch(query, haystack) {
+  const q = grNormalize(query);
+  const h = grNormalize(haystack);
+  if (!q) return true;
+  if (h.includes(q)) return true;
+  if (q.length >= 4 && grIsSubsequence(q, h)) return true;
+  return false;
 }
 
 bindIsotopeFilter();

@@ -31,30 +31,40 @@
   const PRE = rootPrefix();
 
   /* ---------- Build one card's HTML ---------- */
-  function cardHTML(item) {
-    const tags = (item.tags || []).slice(0, 3)
-      .map(t => `<span class="tag-chip">${t}</span>`).join('');
-    const kindLabel = item.kind === 'game' ? 'Game' : 'App';
+function cardHTML(item) {
+  const tags = (item.tags || []).slice(0, 3)
+    .map(t => `<span class="tag-chip">${t}</span>`).join('');
+  const kindLabel = item.kind === 'game' ? 'Game' : 'App';
 
-    return `
-      <article class="card reveal" data-category="${item.category}">
-        <a class="card-link" href="${PRE}${item.url}">
-          <div class="thumb">
-            <img src="${PRE}${item.image}" alt="${item.title}" loading="lazy" />
-            <span class="badge">${kindLabel}</span>
+  // Fuzzy-search haystack: title + full tag list + category, all lowercased.
+  // Spaces are preserved so word-boundary matches work for multi-word titles.
+  const haystack = [
+    item.title,
+    (item.tags || []).join(' '),
+    item.category
+  ].join(' ').toLowerCase();
+
+  return `
+    <article class="card reveal"
+             data-category="${item.category}"
+             data-name="${haystack}">
+      <a class="card-link" href="${PRE}${item.url}">
+        <div class="thumb">
+          <img src="${PRE}${item.image}" alt="${item.title}" loading="lazy" />
+          <span class="badge">${kindLabel}</span>
+        </div>
+        <div class="body">
+          <h3 class="title">${item.title}</h3>
+          <p class="desc">${item.desc}</p>
+          <div class="tag-row">${tags}</div>
+          <div class="meta">
+            <span>${item.version}</span>
+            <span class="ver">${item.price}</span>
           </div>
-          <div class="body">
-            <h3 class="title">${item.title}</h3>
-            <p class="desc">${item.desc}</p>
-            <div class="tag-row">${tags}</div>
-            <div class="meta">
-              <span>${item.version}</span>
-              <span class="ver">${item.price}</span>
-            </div>
-          </div>
-        </a>
-      </article>`;
-  }
+        </div>
+      </a>
+    </article>`;
+}
 
   /* ---------- Figure out which items to show for a given element ---------- */
   function pickItems(el) {
@@ -114,6 +124,32 @@ document.dispatchEvent(new CustomEvent('gamerock:rendered'));
   } else {
     renderAll();
   }
+
+  /* Auto-update the page-head-stat number based on the current page */
+(function updateHeadCounts() {
+  const G = window.GAMEROCK;
+  if (!G) return;
+
+  const page = document.body.dataset.page || '';
+  const gamesByCat = c => G.games.filter(g => g.category === c).length;
+  const appsByCat  = c => G.apps.filter(a => a.category === c).length;
+
+  const counts = {
+    'home':         G.games.length,
+    'games':        G.games.length,
+    'action':       gamesByCat('action'),
+    'racing':       gamesByCat('racing'),
+    'simulation':   gamesByCat('simulation'),
+    'apps':         G.apps.length,
+    'game-tools':   appsByCat('tools'),
+    'media':        appsByCat('media')
+  };
+
+  const number = document.querySelector('.page-head-stat b');
+  if (!number || !(page in counts)) return;
+
+  number.textContent = counts[page];
+})();
 
   /* ---------- Expose for use by search page etc. ---------- */
   window.GAMEROCK_render = renderAll;

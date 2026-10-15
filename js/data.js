@@ -141,6 +141,20 @@ window.GAMEROCK = {
 
   /* ---------- APPS ---------- */
   apps: [
+      {
+      slug: 'vphoneos',
+      title: 'VPhoneOS',
+      kind: 'app',
+      category: 'tools',
+      version: 'v5.1.8',
+      price: 'Free + VIP',
+      image: 'images/vphoneos.png',
+      url: 'apps/game-tools/vphoneos.html',
+      desc: 'Rooted Android 12 virtual machine. Run 32-bit games on 64-bit phones, install Magisk without unlocking bootloader.',
+      tags: ['virtual-machine', 'root', 'magisk', '32-bit', 'sandbox'],
+      featured: true,
+      added: '2026-10-15'
+    },
     {
       slug: 'gameguardian',
       title: 'GameGuardian',
@@ -241,3 +255,8 @@ window.GAMEROCK = {
     }
   ]
 };
+
+window.GAMEROCK.all = [
+  ...window.GAMEROCK.games,
+  ...window.GAMEROCK.apps
+];
