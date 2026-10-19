@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://gamerock.com.ng/</loc>
-<lastmod>2026-10-14T13:42:49+01:00</lastmod>
+<lastmod>2026-10-19T20:22:31+01:00</lastmod>
+</url>
+<url>
+<loc>https://gamerock.com.ng/about.html</loc>
+<lastmod>2026-10-19T20:22:31+01:00</lastmod>
 </url>
 <url>
 <loc>https://gamerock.com.ng/action.html</loc>
@@ -19,6 +23,10 @@
 <url>
 <loc>https://gamerock.com.ng/contact-us.html</loc>
 <lastmod>2026-05-02T04:40:46+01:00</lastmod>
+</url>
+<url>
+<loc>https://gamerock.com.ng/contact.html</loc>
+<lastmod>2026-10-19T20:22:31+01:00</lastmod>
 </url>
 <url>
 <loc>https://gamerock.com.ng/editing.html</loc>
