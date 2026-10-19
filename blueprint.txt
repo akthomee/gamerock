@@ -1,0 +1,52 @@
+gamerock/
+├── index.html
+├── search.html
+├── 404.html
+├── privacy.html
+├── terms.html
+├── contact.html
+├── support.html
+│
+├── games.html                    ← all games
+├── action.html                   ← action category
+├── racing.html
+├── simulation.html
+├── apps.html                     ← all apps
+├── tools.html
+├── media.html
+│
+├── nova2.html                    ← detail pages (flat)
+├── nova3.html
+├── novalegacy.html
+├── novalegacy-tutorials.html
+├── skycombat.html
+├── carx.html
+├── minecraft.html
+├── roblox.html
+├── gameguardian.html
+├── mt-manager.html
+├── f1vm.html
+├── il2cppdumper.html
+├── blackhole.html
+├── fzstudios.html
+├── music-downloader.html
+│
+├── css/
+│   ├── style.css                 ← tokens, themes, layout, components
+│   └── responsive.css            ← all breakpoints
+│
+├── js/
+│ 
+│   └── main.js                   ← theme, nav, render, search
+│
+├── images/                       ← ALL images flat, no subfolders
+│   ├── nova2.jpg
+│   ├── nova3.jpg
+│   ├── carx.jpg
+│   ├── minecraft.jpg
+│   ├── gameguardian.jpg
+│   └── ...
+│
+├── sitemap.xml
+├── robots.txt
+└── CNAME
