@@ -117,9 +117,10 @@
     <div class="drawer-group">
       <span class="drawer-label">// Navigate</span>
       <a href="${PRE}index.html">Home</a>
-      <a href="${PRE}search.html">Blog</a>
+      <a href="${PRE}blog/blog.html">Blog</a>
       <a href="#support-toggle">Support</a>
-      <a href="#contact">Contact</a>
+      <a href="${PRE}about.html">About Us</a>
+      <a href="${PRE}contact.html">Contact Us</a>
     </div>
 
     <div class="drawer-group">
@@ -171,6 +172,8 @@
 
       <div>
         <h4>Company</h4>
+        <a href="${PRE}about.html">About Us</a>
+        <a href="${PRE}contact.html">Contact Us</a>
         <a href="#support-toggle">Support Us</a>
         <a href="${PRE}privacy.html">Privacy Policy</a>
         <a href="${PRE}terms.html">Terms of Service</a>
@@ -422,13 +425,13 @@ function bindSupportModal() {
   if (!toggle) return;
 
   // Every link that should OPEN the modal
-  document.querySelectorAll('a[href="#support-toggle"]').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      toggle.checked = true;
-      document.body.style.overflow = 'hidden';
-    });
-  });
+  document.addEventListener('click', e => {
+  const link = e.target.closest('a[href="#support-toggle"]');
+  if (!link) return;
+  e.preventDefault();
+  toggle.checked = true;
+  document.body.style.overflow = 'hidden';
+});
 
   // When the modal closes, unlock body scroll
   toggle.addEventListener('change', () => {

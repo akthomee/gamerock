@@ -32,7 +32,7 @@
       <article class="card reveal">
         <a class="card-link" href="${PRE}${item.url}">
           <div class="thumb">
-            <img src="${PRE}${item.image}" alt="${item.title}" loading="lazy">
+            <img src="${PRE}${item.image}" alt="${item.title}">
             <span class="badge">${kindLabel}</span>
           </div>
           <div class="body">
@@ -63,14 +63,14 @@
       ];
 
       const appTiles = [
-        { name: 'Tools',    desc: 'Modding · Utilities',  icon: 'screwdriver-wrench', href: `${PRE}apps/game-tools/game-tools.html` },
+        { name: 'Game-Tools',    desc: 'Modding · Utilities',  icon: 'screwdriver-wrench', href: `${PRE}apps/game-tools/game-tools.html` },
         { name: 'Media',    desc: 'Music · Movies · TV',  icon: 'photo-film',         href: `${PRE}apps/media/media.html` },
         { name: 'All Apps', desc: 'Full catalog',         icon: 'layer-group',        href: `${PRE}apps/apps.html` }
       ];
 
       const tiles = scope === 'games' ? gameTiles
                   : scope === 'apps'  ? appTiles
-                  : [...gameTiles.slice(0, 3), ...appTiles.slice(0, 3)];
+                  : [...gameTiles, ...appTiles];
 
       return `
         <section class="wrap">
@@ -153,44 +153,98 @@ latest(el) {
     'related-reads'(el) {
   const scope = el.dataset.scope || 'all';   // 'games' | 'apps' | 'all'
   const tag   = el.dataset.tag;              // e.g. 'gameloft' — optional
-
-  const ALL_POSTS = [
+  
+    const ALL_POSTS = [
+          {
+      url: 'blog/gameloft-google-play-asset-delivery.html',
+      image: 'https://developer.android.com/static/images/cards/distribute/stories/gameloft-asphalt8.jpg',
+      title: 'Gameloft acquires 10% more new users with Google Play Asset Delivery',
+      desc: 'How Gameloft used PAD to ditch the old APK + OBB system, cut CDN costs, and boost user retention by 10% across Asphalt 8 and Minion Rush.',
+      badge: 'Industry', tags: ['gameloft', 'google', 'industry'],
+      meta: '6 min read', date: '26-10-19'
+    },
+    {
+      url: 'blog/nova3-install-guide.html',
+      image: 'images/nova3-image-1.jpg',
+      title: 'How to install N.O.V.A 3 on Android 12',
+      desc: 'The complete walkthrough — APK download, virtual machine setup, and the automatic 2 GB asset fetch explained step by step.',
+      badge: 'Guide', tags: ['tutorial', 'nova', 'gameloft'],
+      meta: '7 min read', date: '2026-01-20'
+    },
     {
       url: 'blog/nova2-install-guide.html',
-      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&h=375&fit=crop&q=80',
+      image: 'images/nova2-image-1.jpg',
       title: 'How to install N.O.V.A 2 on Android 12',
       desc: 'The full step-by-step walkthrough — APK, OBB, virtual machine setup, and the exact folder structure you need.',
       badge: 'Guide', tags: ['tutorial', 'nova', 'gameloft'],
-      meta: '5 min read', date: 'Jan 2026'
+      meta: '5 min read', date: '2026-01-18'
     },
     {
       url: 'blog/best-modding-tools.html',
-      image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=375&fit=crop&q=80',
+      image: 'https://androidayuda.com/wp-content/uploads/2025/12/Modding-de-juegos-en-Android-guia-completa-herramientas-y-riesgos-1.jpg',
       title: '5 best Android modding tools in 2026',
       desc: 'GameGuardian, MT Manager, F1 VM, IL2CppDumper and more — what they do, when to use each, and how to combine them.',
       badge: 'Roundup', tags: ['modding', 'tools', 'hacking'],
-      meta: '8 min read', date: 'Jan 2026'
+      meta: '8 min read', date: '2026-01-15'
     },
     {
       url: 'blog/gameloft-decline.html',
-      image: 'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600&h=375&fit=crop&q=80',
+      image: 'https://media.pocketgamer.biz/images/65205/66698/vivendi-gameloft_s470.jpg',
       title: 'What happened to Gameloft?',
       desc: 'From N.O.V.A and Asphalt to a shell of its former self — the studio that once ruled mobile gaming, and what went wrong.',
       badge: 'Opinion', tags: ['gameloft', 'industry', 'opinion'],
-      meta: '7 min read', date: 'Jan 2026'
+      meta: '7 min read', date: '2026-01-12'
     },
     {
       url: 'blog/carx-drift-tips.html',
-      image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&h=375&fit=crop&q=80',
+      image: 'https://play-lh.googleusercontent.com/qB69goUYYHNjsxajVE7VmbQrNY0GMRqgYGfsbBn03u91GOylKSJulwlBPSjU9bxKQgfxbm9L6I3B02J6mIEgaAM=w526-h296-rw',
       title: 'CarX Street: 7 drift tips that work',
       desc: 'Tune your suspension, master the handbrake, and stop losing momentum mid-corner. From rookie to podium.',
       badge: 'Tips', tags: ['racing', 'carx', 'drift'],
-      meta: '6 min read', date: 'Dec 2025'
+      meta: '6 min read', date: '2025-12-28'
     }
   ];
 
   // Filter if the page requested a scope or tag
   let posts = ALL_POSTS;
+
+  // Custom override for scope="all"
+  if (scope === 'all') {
+      return `
+    <section class="wrap">
+      <header class="section-head">
+        <div>
+          <span class="kicker">// All posts</span>
+          <h2>From the blog</h2>
+        </div>
+        <a class="view-all" href="${PRE}blog/blog.html">See all <i class="fa-solid fa-arrow-right"></i></a>
+      </header>
+      <div class="grid grid-3 parent-cool-border scroll-x">
+        ${posts.map(p => `
+          <article class="card reveal">
+            <a class="card-link" href="${PRE}${p.url}">
+              <div class="thumb">
+                <img src="${p.image.startsWith('http') ? p.image : PRE + p.image}" alt="${p.title}" loading="lazy">
+                <span class="badge">${p.badge}</span>
+              </div>
+              <div class="body">
+                <h3 class="title">${p.title}</h3>
+                <p class="desc">${p.desc}</p>
+                <div class="tag-row">
+                  ${p.tags.map(t => `<span class="tag-chip">${t}</span>`).join('')}
+                </div>
+                <div class="meta">
+                  <span>${p.meta}</span>
+                  <span class="ver">${p.date}</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        `).join('')}
+      </div>
+    </section>`;
+  }
+
   if (scope === 'games') posts = posts.filter(p => !p.tags.includes('tools') && !p.tags.includes('downloader') && !p.tags.includes('media'));
   if (scope === 'apps')  posts = posts.filter(p => p.tags.includes('tools') || p.tags.includes('downloader') || p.tags.includes('media'));
   if (tag) posts = posts.filter(p => p.tags.includes(tag));
@@ -198,7 +252,7 @@ latest(el) {
   // Fallback: if nothing matched, show the first 3
   if (!posts.length) posts = ALL_POSTS.slice(0, 3);
 
-  posts = posts.slice(0, 3);
+  posts = posts.slice().sort(() => Math.random() - 0.5).slice(0, 3);
 
   return `
     <section class="wrap">
@@ -207,14 +261,14 @@ latest(el) {
           <span class="kicker">// Related Reads</span>
           <h2>From the blog</h2>
         </div>
-        <a class="view-all" href="${PRE}blog.html">All articles <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="view-all" href="${PRE}blog/blog.html">All articles <i class="fa-solid fa-arrow-right"></i></a>
       </header>
       <div class="grid grid-3 parent-cool-border scroll-x">
         ${posts.map(p => `
           <article class="card reveal">
             <a class="card-link" href="${PRE}${p.url}">
               <div class="thumb">
-                <img src="${p.image}" alt="${p.title}" loading="lazy">
+                <img src="${p.image.startsWith('http') ? p.image : PRE + p.image}" alt="${p.title}" loading="lazy">
                 <span class="badge">${p.badge}</span>
               </div>
               <div class="body">
@@ -316,7 +370,7 @@ latest(el) {
         <div class="hero-stats">
           <div class="hs"><b>${G.games.length}</b><span>Games</span></div>
           <div class="hs"><b>${G.apps.length}</b><span>Apps</span></div>
-          <div class="hs"><b>${G.apps.filter(a => a.category === 'tools').length}</b><span>Tools</span></div>
+          <div class="hs"><b>${G.apps.filter(a => a.category === 'tools').length}</b><span>Game-Tools</span></div>
           <div class="hs"><b>100<i>%</i></b><span>Free</span></div>
         </div>`;
     }

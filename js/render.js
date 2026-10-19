@@ -106,6 +106,11 @@ function cardHTML(item) {
       el.innerHTML = items.map(cardHTML).join('');
     });
 
+    // Update blog post count in the page head (if present)
+  const blogCount = document.getElementById('blogCount');
+  if (blogCount && window.GAMEROCK_BLOG) {
+  blogCount.textContent = window.GAMEROCK_BLOG.length;
+  }
     // Re-run reveal observer if main.js exposes it
     if (typeof window.GAMEROCK_reveal === 'function') {
       window.GAMEROCK_reveal();
