@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberdeck">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gameloft acquires 10% more users with Google Play Asset Delivery | GameRock</title>
+<meta name="description" content="How Gameloft used Google Play Asset Delivery (PAD) to ditch the old APK + OBB system, cut CDN costs, and boost user retention by 10%." />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:title" content="Gameloft boosts users by 10% with Play Asset Delivery" />
+<meta property="og:description" content="How Gameloft used Google Play Asset Delivery to ditch the old APK + OBB system and boost retention." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gamerock.com.ng/blog/gameloft-google-play-asset-delivery.html" />
+<meta property="og:image" content="https://developer.android.com/static/images/cards/distribute/stories/gameloft-asphalt8.jpg" />
+<link rel="canonical" href="https://gamerock.com.ng/blog/gameloft-google-play-asset-delivery.html" />
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('gr-theme') || 'cyberdeck';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+
+<!-- Chrome injection (runs synchronous so header/footer appear before paint) -->
+<script src="../js/injection.js"></script>
+<script src="../js/main.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://gamerock.com.ng/gr-logo-1.png" />
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025861444505003" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS58RYFRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FLS58RYFRR');
+</script>
+</head>
+
+<body data-page="blog">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-motes" id="bg-motes"></div>
+  <div class="bg-sun"></div>
+  <div class="bg-rain" id="bg-rain"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<!-- header + drawer injected by injection.js -->
+
+<main id="main">
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span>Play Asset Delivery</span>
+    </nav>
+
+    <div class="page-head-row">
+      <div>
+        <span class="kicker">// Industry · News</span>
+        <h1 class="page-title">Gameloft acquires 10% more new users with <span class="accent">Google Play Asset Delivery</span></h1>
+        <p class="page-lede">
+          The old APK + OBB system is dead. Here is how Gameloft used Google's Play Asset 
+          Delivery (PAD) to cut CDN costs, fight pirates, and boost user retention across 
+          their biggest titles.
+        </p>
+      </div>
+      <div class="page-head-stat">
+        <b>6</b>
+        <span>Min Read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERO COVER ============ -->
+<section class="wrap">
+  <div class="detail-cover parent-cool-border">
+    <img src="https://developer.android.com/static/images/cards/distribute/stories/gameloft-asphalt8.jpg" alt="Gameloft and Google Play" />
+  </div>
+</section>
+
+<!-- ============ ARTICLE BODY ============ -->
+<section class="wrap">
+  <div class="prose">
+
+    <p>
+      If you’ve ever tried to download a large Android game from a third-party site, you 
+      know the pain of the APK + OBB system. You download a small APK file, then you have 
+      to hunt down an 800 MB OBB file, extract it, and place it in the exact right folder 
+      (like <code>/Android/obb/com.gameloft...</code>) or the game crashes on launch.
+    </p>
+    <p>
+      For years, Gameloft relied on this archaic system. It was a nightmare for users, 
+      but it was also a nightmare for Gameloft. They had to pay massive Content Delivery 
+      Network (CDN) bills to host those giant OBB files, and they had zero control over 
+      who was downloading them.
+    </p>
+    <p>
+      That changed when Gameloft adopted <strong>Google Play Asset Delivery (PAD)</strong>. 
+      According to a recent case study shared by Google, migrating to PAD didn't just save 
+      them money—it actually increased their new user acquisition by 10%. Here is how they 
+      did it, and why it matters for the future of Android gaming.
+    </p>
+
+    <h2>What is Play Asset Delivery (PAD)?</h2>
+    <p>
+      Play Asset Delivery is Google’s modern replacement for OBB files. Instead of forcing 
+      the user to download a massive file all at once, PAD allows developers to break their 
+      game assets into smaller, dynamic chunks.
+    </p>
+    <p>
+      These chunks can be delivered in three ways:
+    </p>
+    <ul>
+      <li><strong>Install-time:</strong> Downloaded at the same time as the base APK.</li>
+      <li><strong>Fast-follow:</strong> Downloaded automatically in the background as soon as the player opens the game for the first time.</li>
+      <li><strong>On-demand:</strong> Downloaded only when the player actually reaches a specific level or needs a specific asset (like a high-res texture pack).</li>
+    </ul>
+
+    <h2>The Problem with APK + OBB</h2>
+    <p>
+      Gameloft’s biggest titles—like <em>Asphalt 8</em>, <em>Asphalt 9</em>, and 
+      <em>Minion Rush</em>—were sitting on years of legacy code. They relied heavily on 
+      the OBB system. 
+    </p>
+    <p>
+      When a user downloaded these games from the Play Store, Google would push the APK, 
+      but Gameloft had to host the OBB on their own servers. This caused three massive 
+      problems:
+    </p>
+    <ol>
+      <li><strong>High Drop-off Rates:</strong> If the OBB download failed, or if the user ran out of storage halfway through, the game would break. Users would instantly uninstall and leave a 1-star review.</li>
+      <li><strong>Piracy:</strong> It was incredibly easy for modding sites to steal the OBB, strip the DRM from the APK, and re-upload the whole game for free.</li>
+      <li><strong>Server Costs:</strong> Gameloft had to pay for the bandwidth every time someone downloaded an 800 MB OBB file.</li>
+    </ol>
+
+    <h2>How PAD Solved Gameloft’s Problems</h2>
+    <p>
+      By switching to Google Play Asset Delivery, Gameloft handed the heavy lifting over 
+      to Google’s infrastructure. 
+    </p>
+    <p>
+      When a user installs <em>Asphalt 9</em> today, Google handles the entire download 
+      process. If the user’s connection drops, Google Play automatically resumes the 
+      download without corrupting the files. Gameloft no longer has to pay for the CDN 
+      bandwidth, and because PAD files are stored securely on Google's servers, they are 
+      much harder to pirate.
+    </p>
+    <p>
+      But the most surprising metric was user retention. By eliminating the confusing OBB 
+      step, Gameloft saw a <strong>10% increase in new users successfully completing the 
+      onboarding process</strong>. Players were actually getting into the game instead of 
+      bouncing off a "Download Failed" screen.
+    </p>
+
+    <h2>What This Means for Modders and GameRock</h2>
+    <p>
+      If you are a regular visitor to GameRock, you know we provide APK + OBB downloads 
+      for classic games. You might be wondering what happens to those games now that PAD 
+      is the standard.
+    </p>
+    <p>
+      For newer games (like <em>Asphalt 9</em> or <em>Disney Speedstorm</em>), PAD makes 
+      modding and archiving much harder. Because the assets are delivered dynamically and 
+      tied to your Google account, you can't just extract a single OBB file and share it. 
+      This is Google's way of locking down the ecosystem and stopping piracy.
+    </p>
+    <p>
+      However, for the older, delisted classics (like <em>N.O.V.A. 2</em> and 
+      <em>N.O.V.A. 3</em>), the old OBB system is actually a blessing. Because those games 
+      are no longer on the Play Store, they don't use PAD. They are frozen in time. That is 
+      why we can still preserve them, host the OBB files, and keep the legacy alive.
+    </p>
+
+    <h2>The Future of Mobile Gaming</h2>
+    <p>
+      Gameloft’s success with PAD is a sign of things to come. As mobile games get larger 
+      and more complex, the old APK + OBB system simply cannot survive. Google is pushing 
+      all developers to use App Bundles and Play Asset Delivery.
+    </p>
+    <p>
+      For developers, it means lower costs and higher retention. For players, it means a 
+      cleaner, more seamless installation process—no more hunting for folders or restarting 
+      downloads. And for the modding community? It means we have to adapt, and focus on 
+      preserving the games that came before the cloud took over.
+    </p>
+
+  </div>
+</section>
+
+<!-- ============ BROKEN LINK ============ -->
+<section class="wrap">
+  <div class="div-brokenlink">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Want to play a classic Gameloft game? Check our archives before they are lost forever.
+    <a href="../games/games.html">Explore Games</a>
+  </div>
+</section>
+
+<!-- ============ RELATED READS ============ -->
+<section data-section="related-reads" data-scope="all"></section>
+
+<!-- ============ CTA ============ -->
+<section data-section="cta"></section>
+
+</main>
+
+<!-- footer + radial menu + support modal injected by injection.js -->
+
+<!-- ============ SCRIPT BOOT ============ -->
+<script src="../js/injection.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/injection-sections.js"></script>
+<script src="../js/render.js"></script>
+
+</body>
+</html>
