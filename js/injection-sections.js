@@ -26,13 +26,13 @@
 
   /* ---------- Card template (shared by latest + related reads) ---------- */
   function cardHTML(item, kindLabel) {
-    const tags = (item.tags || []).slice(0, 3)
+    const tags = (item.tags || [])
       .map(t => `<span class="tag-chip">${t}</span>`).join('');
     return `
       <article class="card reveal">
         <a class="card-link" href="${PRE}${item.url}">
           <div class="thumb">
-            <img src="${PRE}${item.image}" alt="${item.title}">
+            <img src="${item.image.startsWith('http') ? item.image : PRE + item.image}" alt="${item.title}" loading="lazy">
             <span class="badge">${kindLabel}</span>
           </div>
           <div class="body">
@@ -154,13 +154,77 @@ latest(el) {
   const scope = el.dataset.scope || 'all';   // 'games' | 'apps' | 'all'
   const tag   = el.dataset.tag;              // e.g. 'gameloft' — optional
   
-    const ALL_POSTS = [
-          {
+      const ALL_POSTS = [
+    {
+      url: 'blog/what-kind-of-game-is-minecraft.html',
+      image: 'https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&h=375&fit=crop&q=80',
+      title: 'What Kind of Game is Minecraft? (And Why is it So Addictive?)',
+      desc: 'It has no quests, no objective, and looks like Lego. So why do people lose thousands of hours to Minecraft? We break down the psychology of the sandbox.',
+      badge: 'Analysis', tags: ['minecraft', 'sandbox', 'survival', 'psychology', 'game-design', 'mojang', 'opinion', 'addictive'],
+      meta: '7 min read', date: '26-10-19'
+    },
+    {
+      url: 'blog/nova-saga-comparison.html',
+      image: 'images/nova3-image-1.jpg',
+      title: 'N.O.V.A. 3 vs 2 vs Legacy: Which One Should You Play?',
+      desc: 'A deep dive comparing N.O.V.A. 3, N.O.V.A. 2, and N.O.V.A. Legacy. We break down the pros and cons of each game to help you decide which to play first.',
+      badge: 'Comparison', tags: ['nova', 'gameloft', 'fps', 'sci-fi', 'review', 'comparison', 'action', 'shooter'],
+      meta: '7 min read', date: '26-10-19'
+    },
+    {
+      url: 'blog/what-is-an-obb-file-android.html',
+      image: 'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=375&fit=crop&q=80',
+      title: 'What is an OBB File? (And Why Android Games Need Them)',
+      desc: 'If you have ever tried to install an APK and got stuck looking for an OBB, this guide is for you. We explain what OBB files are, how to extract them, and where to place them.',
+      badge: 'Guide', tags: ['tutorial', 'android', 'tools', 'obb', 'apk', 'file-management', 'modding', 'guide'],
+      meta: '5 min read', date: '26-10-20'
+    },
+    {
+      url: 'blog/forgotten-offline-games-android.html',
+      image: 'https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?w=600&h=375&fit=crop&q=80',
+      title: '5 Forgotten Offline Games You Can Still Play on Android',
+      desc: 'No internet? No problem. These 5 classic single-player games were removed from the Play Store, but you can still play them today with zero ads.',
+      badge: 'Roundup', tags: ['games', 'offline', 'retro', 'classic', 'android', 'roundup', 'nostalgia', 'preservation'],
+      meta: '6 min read', date: '26-10-20'
+    },
+    {
+      url: 'blog/best-game-hacking-tools-2026.html',
+      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=375&fit=crop&q=80',
+      title: '5 Best Game Hacking Tools for Android in 2026',
+      desc: 'From memory editors to virtual machines. We rank the absolute best tools for modding Android games right now, and explain what each one is used for.',
+      badge: 'Roundup', tags: ['modding', 'tools', 'hacking', 'gameguardian', 'vphoneos', 'root', 'android', 'roundup', 'cheats'],
+      meta: '8 min read', date: '26-10-20'
+    },
+    {
+      url: 'blog/old-gameloft-games-hit-different.html',
+      image: 'https://media.pocketgamer.biz/images/65205/66698/vivendi-gameloft_s470.jpg',
+      title: 'Why Old Gameloft Games Hit Different',
+      desc: 'Nostalgia, console-level ambition, and no microtransactions. An editorial on why the classic Gameloft era still feels better than modern games.',
+      badge: 'Editorial', tags: ['gameloft', 'industry', 'opinion', 'nostalgia', 'editorial', 'classic', 'mobile-gaming', 'retro'],
+      meta: '5 min read', date: '26-10-19'
+    },
+    {
+      url: 'blog/fix-app-not-installed-android-14.html',
+      image: 'images/gg-image-1.jpg',
+      title: "Fixing 'App Not Installed' on Android 14 & 15",
+      desc: 'Getting the "App not installed" error when trying to run older games? Here is why Android 14+ blocks 32-bit apps, and the exact way to bypass it.',
+      badge: 'Guide', tags: ['tutorial', 'android', 'tools', 'troubleshooting', '32-bit', 'vphoneos', 'emulator', 'fix'],
+      meta: '6 min read', date: '26-10-20'
+    },
+    {
+      url: 'blog/top-5-offline-fps-android.html',
+      image: 'images/nova3-image-1.jpg',
+      title: 'Top 5 Offline FPS Games for Android (No Wi-Fi Required)',
+      desc: 'Tired of lag and ads? Here are the 5 best first-person shooters you can play completely offline on Android, no internet required.',
+      badge: 'Roundup', tags: ['fps', 'offline', 'action', 'shooter', 'nova', 'gameloft', 'roundup', 'single-player'],
+      meta: '7 min read', date: '26-10-19'
+    },
+    {
       url: 'blog/gameloft-google-play-asset-delivery.html',
       image: 'https://developer.android.com/static/images/cards/distribute/stories/gameloft-asphalt8.jpg',
       title: 'Gameloft acquires 10% more new users with Google Play Asset Delivery',
       desc: 'How Gameloft used PAD to ditch the old APK + OBB system, cut CDN costs, and boost user retention by 10% across Asphalt 8 and Minion Rush.',
-      badge: 'Industry', tags: ['gameloft', 'google', 'industry'],
+      badge: 'Industry', tags: ['gameloft', 'google', 'industry', 'asset-delivery', 'obb', 'news', 'android', 'development'],
       meta: '6 min read', date: '26-10-19'
     },
     {
@@ -168,7 +232,7 @@ latest(el) {
       image: 'images/nova3-image-1.jpg',
       title: 'How to install N.O.V.A 3 on Android 12',
       desc: 'The complete walkthrough — APK download, virtual machine setup, and the automatic 2 GB asset fetch explained step by step.',
-      badge: 'Guide', tags: ['tutorial', 'nova', 'gameloft'],
+      badge: 'Guide', tags: ['tutorial', 'nova', 'gameloft', 'install', 'android', 'fps', 'vphoneos', 'guide', 'action'],
       meta: '7 min read', date: '2026-01-20'
     },
     {
@@ -176,7 +240,7 @@ latest(el) {
       image: 'images/nova2-image-1.jpg',
       title: 'How to install N.O.V.A 2 on Android 12',
       desc: 'The full step-by-step walkthrough — APK, OBB, virtual machine setup, and the exact folder structure you need.',
-      badge: 'Guide', tags: ['tutorial', 'nova', 'gameloft'],
+      badge: 'Guide', tags: ['tutorial', 'nova', 'gameloft', 'install', 'android', 'fps', 'obb', 'guide', 'action'],
       meta: '5 min read', date: '2026-01-18'
     },
     {
@@ -184,7 +248,7 @@ latest(el) {
       image: 'https://androidayuda.com/wp-content/uploads/2025/12/Modding-de-juegos-en-Android-guia-completa-herramientas-y-riesgos-1.jpg',
       title: '5 best Android modding tools in 2026',
       desc: 'GameGuardian, MT Manager, F1 VM, IL2CppDumper and more — what they do, when to use each, and how to combine them.',
-      badge: 'Roundup', tags: ['modding', 'tools', 'hacking'],
+      badge: 'Roundup', tags: ['modding', 'tools', 'hacking', 'gameguardian', 'mt-manager', 'f1vm', 'android', 'roundup'],
       meta: '8 min read', date: '2026-01-15'
     },
     {
@@ -192,7 +256,7 @@ latest(el) {
       image: 'https://media.pocketgamer.biz/images/65205/66698/vivendi-gameloft_s470.jpg',
       title: 'What happened to Gameloft?',
       desc: 'From N.O.V.A and Asphalt to a shell of its former self — the studio that once ruled mobile gaming, and what went wrong.',
-      badge: 'Opinion', tags: ['gameloft', 'industry', 'opinion'],
+      badge: 'Opinion', tags: ['gameloft', 'industry', 'opinion', 'history', 'mobile-gaming', 'vivendi', 'editorial', 'decline'],
       meta: '7 min read', date: '2026-01-12'
     },
     {
@@ -200,7 +264,7 @@ latest(el) {
       image: 'https://play-lh.googleusercontent.com/qB69goUYYHNjsxajVE7VmbQrNY0GMRqgYGfsbBn03u91GOylKSJulwlBPSjU9bxKQgfxbm9L6I3B02J6mIEgaAM=w526-h296-rw',
       title: 'CarX Street: 7 drift tips that work',
       desc: 'Tune your suspension, master the handbrake, and stop losing momentum mid-corner. From rookie to podium.',
-      badge: 'Tips', tags: ['racing', 'carx', 'drift'],
+      badge: 'Tips', tags: ['racing', 'carx', 'drift', 'tips', 'tutorial', 'android', 'carx-street', 'guide'],
       meta: '6 min read', date: '2025-12-28'
     }
   ];
@@ -302,24 +366,38 @@ latest(el) {
            : scope === 'games' ? G.games.slice()
            : [...G.games, ...G.apps];
 
-  // Filter by category OR tag
+  // 1. Shuffle the entire pool FIRST
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+       // Filter by multiple categories AND tags (requires at least 70% match)
   if (filter && filter !== 'all') {
+    const filters = filter.split(',').map(f => f.trim());
+    
     pool = pool.filter(item => {
-      if (item.category === filter) return true;
-      if ((item.tags || []).includes(filter)) return true;
-      return false;
+      let matchCount = 0;
+      
+      // Count how many filters this game matches
+      filters.forEach(f => {
+        if (item.category === f || (item.tags || []).includes(f)) {
+          matchCount++;
+        }
+      });
+      
+      // Calculate percentage (e.g., 2 out of 3 = 66%)
+      const matchPercentage = matchCount / filters.length;
+      
+      // Keep the game if it matches at least 70%
+      return matchPercentage >= 0.7;
     });
+
+    
   }
 
   // Exclude the current page's own game (if provided)
   if (exclude) pool = pool.filter(item => item.slug !== exclude);
-
-  // Prefer featured items first, then newest, then title A–Z
-  pool.sort((a, b) => {
-    if (a.featured && !b.featured) return -1;
-    if (!a.featured && b.featured) return 1;
-    return (b.added || '').localeCompare(a.added || '');
-  });
 
   const items = pool.slice(0, limit);
 

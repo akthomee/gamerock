@@ -38,7 +38,91 @@ window.GAMEROCK = {
   },
 
   /* ---------- GAMES ---------- */
-  games: [
+    games: [
+    {
+      slug: 'modern-combat-4',
+      title: 'Modern Combat 4: Zero Hour',
+      kind: 'game',
+      category: 'action',
+      version: 'v1.2.3f',
+      price: 'Free',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMw-Wi2ILKImuRuLfT_skzDcp_p4yKLxVvUGnCOqMR-g&s=10',
+      url: 'games/action/modern-combat-4.html',
+      desc: 'The absolute peak of Gameloft\'s mobile shooter era. Fight through an explosive campaign where you play as both the hero and the villain.',
+      tags: ['action', 'fps', 'shooter', 'modern-combat', 'gameloft', 'military', 'war', 'offline', 'single-player', 'campaign', 'classic', '3d', 'realistic'],
+      featured: false,
+      added: '2026-10-20'
+    },
+    {
+      slug: 'modern-combat-2',
+      title: 'Modern Combat 2: Black Pegasus',
+      kind: 'game',
+      category: 'action',
+      version: 'v1.0.5',
+      price: 'Free',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTCF__ChWWnJ6KCwdMNpLB-hHXmn_odNCMpsH1iso_g&s=10',
+      url: 'games/action/modern-combat-2.html',
+      desc: 'The explosive sequel that defined mobile FPS gaming. Dive into a globe-trotting campaign to stop a terrorist threat.',
+      tags: ['action', 'fps', 'shooter', 'modern-combat', 'gameloft', 'military', 'war', 'offline', 'single-player', 'campaign', 'classic', 'retro', '3d'],
+      featured: false,
+      added: '2026-10-20'
+    },
+    {
+      slug: 'the-amazing-spiderman-2',
+      title: 'The Amazing Spider-Man 2',
+      kind: 'game',
+      category: 'action',
+      version: 'v1.2.8d',
+      price: 'Free',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUVKVRB32YfTTgmycQW3M-DU3jPH0OzOc4CEaf5aGVQA&s=10',
+      url: 'games/action/the-amazing-spider-man-2.html',
+      desc: 'Swing through an open-world Manhattan, fight Electro, and uncover the truth behind Oscorp in this parallel story to the 2014 film.',
+      tags: ['action', 'spiderman', 'marvel', 'open-world', 'superhero', 'gameloft', 'movie-tie-in', 'beat-em-up', 'offline', 'single-player', '3d', 'adventure', 'comic-book'],
+      featured: false,
+      added: '2026-10-20'
+    },
+    {
+      slug: 'the-amazing-spiderman',
+      title: 'The Amazing Spider-Man',
+      kind: 'game',
+      category: 'action',
+      version: 'v1.1.3',
+      price: 'Free',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFB9cL-iMTAKfvfOJRqOTfe7uFm5OyOxHLiwAW2YWjuw&s=10',
+      url: 'games/action/the-amazing-spider-man.html',
+      desc: 'Swing through a massive 3D open-world Manhattan and stop the Lizard in this console-style action game.',
+      tags: ['action', 'spiderman', 'marvel', 'open-world', 'superhero', 'gameloft', 'movie-tie-in', 'beat-em-up', 'offline', 'single-player', '3d', 'adventure', 'comic-book'],
+      featured: false,
+      added: '2026-10-20'
+    },
+    {
+      slug: 'marvel-spider-man-unlimited',
+      title: 'MARVEL Spider-Man Unlimited',
+      kind: 'game',
+      category: 'action',
+      version: 'v4.6.0c',
+      price: 'Free',
+      image: 'https://downloadr2.apkmirror.com/wp-content/uploads/2018/07/5b4a38e444389.png',
+      url: 'games/action/marvel-spider-man-unlimited.html',
+      desc: 'Run, swing, and fight through alternate dimensions in this endless runner featuring hundreds of Spider-Verse characters.',
+      tags: ['action', 'spiderman', 'marvel', 'runner', 'endless-runner', 'superhero', 'gameloft', 'comic-book', 'spider-verse', 'multiplayer', '3d', 'arcade', 'offline'],
+      featured: false,
+      added: '2026-10-20'
+    },
+    {
+      slug: 'ultimate-spider-man-total-mayhem',
+      title: 'Ultimate Spider-Man Total Mayhem',
+      kind: 'game',
+      category: 'action',
+      version: 'v1.0.8',
+      price: 'Free',
+      image: 'https://only4gamers.xyz/wp-content/uploads/2021/05/Ultimate-Spider-Man-Total-Mayhem-HD-Android-Icon.jpg',
+      url: 'games/action/ultimate-spider-man-total-mayhem.html',
+      desc: 'Total Mayhem — the best superhero game Gameloft ever made. Swing through New York and fight iconic villains.',
+      tags: ['action', 'spiderman', 'marvel', 'superhero', 'gameloft', 'brawler', 'beat-em-up', 'comic-book', 'offline', 'single-player', '3d', 'classic', 'cartoon'],
+      featured: false,
+      added: '2026-10-20'
+    },
     {
       slug: 'nova3',
       title: 'N.O.V.A 3',
@@ -49,7 +133,7 @@ window.GAMEROCK = {
       image: 'images/nova3-image-1.jpg',
       url: 'games/action/nova3.html',
       desc: 'The most immersive sci-fi FPS franchise on mobile. Fight for humankind across 10 levels and 12-player battles.',
-      tags: ['fps', 'sci-fi', 'gameloft'],
+      tags: ['action', 'fps', 'shooter', 'nova', 'sci-fi', 'gameloft', 'space', 'alien', 'offline', 'multiplayer', '3d', 'classic', 'campaign'],
       featured: true,
       added: '2026-01-10'
     },
@@ -63,7 +147,7 @@ window.GAMEROCK = {
       image: 'images/nova2-image-1.jpg',
       url: 'games/action/nova2.html',
       desc: '12 chapters, a dozen weapons, three special powers and an epic campaign on the colonies of Scorpius.',
-      tags: ['fps', 'sci-fi', 'gameloft', 'classic'],
+      tags: ['action', 'fps', 'shooter', 'nova', 'sci-fi', 'gameloft', 'space', 'alien', 'offline', 'single-player', 'classic', 'retro', 'campaign'],
       featured: true,
       added: '2026-01-08'
     },
@@ -77,7 +161,7 @@ window.GAMEROCK = {
       image: 'images/novalegacy-image-1.jpg',
       url: 'games/action/novalegacy.html',
       desc: 'Console-like shooter on mobile with crafting, weapon upgrades and multiplayer arenas.',
-      tags: ['fps', 'multiplayer', 'gameloft'],
+      tags: ['action', 'fps', 'shooter', 'nova', 'sci-fi', 'gameloft', 'space', 'alien', 'multiplayer', 'online', '3d', 'offline', 'arenas'],
       featured: false,
       added: '2026-01-12'
     },
@@ -91,7 +175,7 @@ window.GAMEROCK = {
       image: 'images/skycombat-image-1.jpg',
       url: 'games/action/skycombat.html',
       desc: 'Realistic aircraft combat with physics, three maps and fighters from the MiG-19 to the Su-57.',
-      tags: ['war', 'pvp', 'flight'],
+      tags: ['action', 'war', 'flight', 'pvp', 'multiplayer', 'online', 'planes', 'military', 'simulation', '3d', 'realistic', 'combat'],
       featured: false,
       added: '2025-12-20'
     },
@@ -105,7 +189,7 @@ window.GAMEROCK = {
       image: 'images/carx-image-1.jpg',
       url: 'games/racing/carx.html',
       desc: 'High-speed street racing with deep customization, realistic physics, day/night cycle and multiplayer.',
-      tags: ['racing', 'drift', 'open-world'],
+      tags: ['racing', 'drift', 'open-world', 'cars', 'multiplayer', 'online', 'carx', 'simulation', '3d', 'realistic', 'tuning', 'customization', 'street-racing'],
       featured: true,
       added: '2026-01-15'
     },
@@ -119,7 +203,7 @@ window.GAMEROCK = {
       image: 'images/mc-image-1.jpg',
       url: 'games/simulation/minecraft.html',
       desc: 'Explore, mine, craft and build without bounds. Two major modes: creative and survival.',
-      tags: ['sandbox', 'survival', 'mojang'],
+      tags: ['simulation', 'sandbox', 'survival', 'creative', 'multiplayer', 'mojang', 'building', 'adventure', 'offline', 'online', '3d', 'voxel', 'open-world'],
       featured: true,
       added: '2025-12-28'
     },
@@ -133,7 +217,7 @@ window.GAMEROCK = {
       image: 'images/roblox-image-1.jpg',
       url: 'games/simulation/roblox.html',
       desc: 'Design, build and play millions of user-created experiences. Cross-platform with friends.',
-      tags: ['sandbox', 'multiplayer', 'community'],
+      tags: ['simulation', 'sandbox', 'multiplayer', 'online', 'community', 'creation', 'social', 'cross-platform', '3d', 'open-world', 'adventure', 'games'],
       featured: false,
       added: '2025-12-22'
     }

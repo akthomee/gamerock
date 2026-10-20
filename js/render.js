@@ -32,7 +32,7 @@
 
   /* ---------- Build one card's HTML ---------- */
 function cardHTML(item) {
-  const tags = (item.tags || []).slice(0, 3)
+  const tags = (item.tags || [])
     .map(t => `<span class="tag-chip">${t}</span>`).join('');
   const kindLabel = item.kind === 'game' ? 'Game' : 'App';
 
@@ -50,7 +50,7 @@ function cardHTML(item) {
              data-name="${haystack}">
       <a class="card-link" href="${PRE}${item.url}">
         <div class="thumb">
-          <img src="${PRE}${item.image}" alt="${item.title}" loading="lazy" />
+          <img src="${item.image.startsWith('http') ? item.image : PRE + item.image}" alt="${item.title}" loading="lazy" />
           <span class="badge">${kindLabel}</span>
         </div>
         <div class="body">

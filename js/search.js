@@ -122,7 +122,7 @@ function score(item, rawQuery) {
 
   /* ---------- Build card HTML (mirrors render.js) ---------- */
   function cardHTML(item) {
-    const tags = (item.tags || []).slice(0, 3)
+    const tags = (item.tags || [])
       .map(t => `<span class="tag-chip">${t}</span>`).join('');
     const label = item.kind === 'game' ? 'Game' : 'App';
     return `
