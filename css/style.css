@@ -540,7 +540,17 @@ section { padding: 4rem 0; }
 .card .body { padding: 1rem 1.05rem 1.1rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
 .card .title { font-family: var(--font-display); font-size: .98rem; font-weight: 700; letter-spacing: .02em; line-height: 1.25; margin: 0; }
 .card .desc { font-size: .82rem; color: var(--text-dim); margin: 0; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.card .tag-row { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: auto; }
+.card .tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+  max-height: 40px; /* Adjust this to fit about 3-4 rows of tags */
+  overflow-y: auto;
+  padding-right: 4px; /* Prevents tags from touching the scrollbar */
+  scrollbar-width: thin; /* For Firefox */
+}
+
 .card .tag-row .tag-chip { font-size: .6rem; padding: .2rem .5rem; }
 .card .meta { display: flex; justify-content: space-between; align-items: center; padding-top: .55rem; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
 .card .meta .ver { color: var(--accent); }
@@ -1676,3 +1686,4 @@ button.hud-tile {
 @media (max-width: 640px) {
   .slider { width: 85%; }
 }
+
