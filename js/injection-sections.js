@@ -155,9 +155,17 @@ latest(el) {
   const tag   = el.dataset.tag;              // e.g. 'gameloft' — optional
   
       const ALL_POSTS = [
+        {
+  url: 'blog/how-to-check-if-apk-is-safe.html',
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS207dhf2n7gSly_5lnVLOkDpX4JvusIQqCqP02o5mArNDzVWbnkWQ7AlhZ&s=10',
+  title: 'How to tell if an APK is safe before you install it',
+  desc: 'Six practical checks — source, permissions, signatures, and VirusTotal — that catch most malicious APKs in under five minutes.',
+  badge: 'Tutorial', tags: ['security', 'apk', 'tutorial', 'guide', 'android', 'sideloading', 'safety', 'virusTotal'],
+  meta: '7 min read', date: '2026-11-16'
+},
     {
       url: 'blog/what-kind-of-game-is-minecraft.html',
-      image: 'https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&h=375&fit=crop&q=80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7KWJpYY1gWFe3QXgLo0GpTOAHmbXphgNNYYlLBIeQS7DmO8o3keUokI&s=10',
       title: 'What Kind of Game is Minecraft? (And Why is it So Addictive?)',
       desc: 'It has no quests, no objective, and looks like Lego. So why do people lose thousands of hours to Minecraft? We break down the psychology of the sandbox.',
       badge: 'Analysis', tags: ['minecraft', 'sandbox', 'survival', 'psychology', 'game-design', 'mojang', 'opinion', 'addictive'],
@@ -173,7 +181,7 @@ latest(el) {
     },
     {
       url: 'blog/what-is-an-obb-file-android.html',
-      image: 'https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=375&fit=crop&q=80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5BEenGUyrOcIlonSIdK93I4GT9kLaHE1UFWkrXfFumrORbExKUI8YFO6&s=10',
       title: 'What is an OBB File? (And Why Android Games Need Them)',
       desc: 'If you have ever tried to install an APK and got stuck looking for an OBB, this guide is for you. We explain what OBB files are, how to extract them, and where to place them.',
       badge: 'Guide', tags: ['tutorial', 'android', 'tools', 'obb', 'apk', 'file-management', 'modding', 'guide'],
@@ -181,7 +189,7 @@ latest(el) {
     },
     {
       url: 'blog/forgotten-offline-games-android.html',
-      image: 'https://images.unsplash.com/photo-1531525645387-7f14be1bdbbd?w=600&h=375&fit=crop&q=80',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmaC193RhJKGuUYBfHRMrI8hxeZjCE9Qzu8BOszdzMYQ&s=10',
       title: '5 Forgotten Offline Games You Can Still Play on Android',
       desc: 'No internet? No problem. These 5 classic single-player games were removed from the Play Store, but you can still play them today with zero ads.',
       badge: 'Roundup', tags: ['games', 'offline', 'retro', 'classic', 'android', 'roundup', 'nostalgia', 'preservation'],
@@ -197,7 +205,7 @@ latest(el) {
     },
     {
       url: 'blog/old-gameloft-games-hit-different.html',
-      image: 'https://media.pocketgamer.biz/images/65205/66698/vivendi-gameloft_s470.jpg',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpXhejULEqDX_c6WM3mm_FtvwAsg5gpTxxe4b7a_jlAQ&s=10',
       title: 'Why Old Gameloft Games Hit Different',
       desc: 'Nostalgia, console-level ambition, and no microtransactions. An editorial on why the classic Gameloft era still feels better than modern games.',
       badge: 'Editorial', tags: ['gameloft', 'industry', 'opinion', 'nostalgia', 'editorial', 'classic', 'mobile-gaming', 'retro'],
@@ -205,7 +213,7 @@ latest(el) {
     },
     {
       url: 'blog/fix-app-not-installed-android-14.html',
-      image: 'images/gg-image-1.jpg',
+      image: 'https://images.wondershare.com/drfone/article/2023/05/app-not-installed-error-in-android.jpg',
       title: "Fixing 'App Not Installed' on Android 14 & 15",
       desc: 'Getting the "App not installed" error when trying to run older games? Here is why Android 14+ blocks 32-bit apps, and the exact way to bypass it.',
       badge: 'Guide', tags: ['tutorial', 'android', 'tools', 'troubleshooting', '32-bit', 'vphoneos', 'emulator', 'fix'],
@@ -213,7 +221,7 @@ latest(el) {
     },
     {
       url: 'blog/top-5-offline-fps-android.html',
-      image: 'images/nova3-image-1.jpg',
+      image: 'https://preview.redd.it/is-there-any-story-based-fps-games-that-can-be-played-v0-qtm8yt38xa7e1.jpeg?auto=webp&s=55d45ff4f66c843fdb9b52f7a5f930758f2155ba',
       title: 'Top 5 Offline FPS Games for Android (No Wi-Fi Required)',
       desc: 'Tired of lag and ads? Here are the 5 best first-person shooters you can play completely offline on Android, no internet required.',
       badge: 'Roundup', tags: ['fps', 'offline', 'action', 'shooter', 'nova', 'gameloft', 'roundup', 'single-player'],
@@ -261,7 +269,7 @@ latest(el) {
     },
     {
       url: 'blog/carx-drift-tips.html',
-      image: 'https://play-lh.googleusercontent.com/qB69goUYYHNjsxajVE7VmbQrNY0GMRqgYGfsbBn03u91GOylKSJulwlBPSjU9bxKQgfxbm9L6I3B02J6mIEgaAM=w526-h296-rw',
+      image: 'https://img.utdstc.com/screen/9df/f42/9dff42f05d53144176b88f9b5e8bccb102f4e4dcd9376adaea0bf59b298ef0ca:600',
       title: 'CarX Street: 7 drift tips that work',
       desc: 'Tune your suspension, master the handbrake, and stop losing momentum mid-corner. From rookie to podium.',
       badge: 'Tips', tags: ['racing', 'carx', 'drift', 'tips', 'tutorial', 'android', 'carx-street', 'guide'],
