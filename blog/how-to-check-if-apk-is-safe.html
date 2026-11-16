@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberdeck">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to Tell If an APK Is Safe Before You Install It | GameRock</title>
+<meta name="description" content="A practical 6-step guide to checking whether an Android APK is safe before installing it. Verify permissions, signatures, file hashes, and more." />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:title" content="How to Tell If an APK Is Safe Before You Install It" />
+<meta property="og:description" content="Check permissions, verify signatures, scan with VirusTotal, and spot fake download pages before you install any APK." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gamerock.com.ng/blog/how-to-check-if-apk-is-safe.html" />
+<meta property="og:image" content="https://gamerock.com.ng/gr-logo-1.png" />
+<link rel="canonical" href="https://gamerock.com.ng/blog/how-to-check-if-apk-is-safe.html" />
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('gr-theme') || 'cyberdeck';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+
+<!-- Chrome injection (runs synchronous so header/footer appear before paint) -->
+<script src="../js/injection.js"></script>
+<script src="../js/main.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://gamerock.com.ng/gr-logo-1.png" />
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025861444505003" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS58RYFRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FLS58RYFRR');
+</script>
+</head>
+
+<body data-page="blog">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-motes" id="bg-motes"></div>
+  <div class="bg-sun"></div>
+  <div class="bg-rain" id="bg-rain"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<!-- header + drawer injected by injection.js -->
+
+<main id="main">
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span>APK Safety Guide</span>
+    </nav>
+
+    <div class="page-head-row">
+      <div>
+        <span class="kicker">// Tutorial · Security</span>
+        <h1 class="page-title">How to Tell If an APK Is <span class="accent">Safe</span> Before You Install It</h1>
+        <p class="page-lede">
+          Not every APK is what it claims to be. Before you sideload anything, here are
+          six practical checks — from permissions and file signatures to VirusTotal scans
+          and fake download pages — that take less than five minutes.
+        </p>
+      </div>
+      <div class="page-head-stat">
+        <b>7</b>
+        <span>Min Read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERO COVER ============ -->
+<section class="wrap">
+  <div class="detail-cover parent-cool-border">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS207dhf2n7gSly_5lnVLOkDpX4JvusIQqCqP02o5mArNDzVWbnkWQ7AlhZ&s=10" alt="Checking an Android APK for safety" />
+  </div>
+</section>
+
+<!-- ============ QUICK DOWNLOAD / CTA ============ -->
+<section class="wrap">
+  <div class="tutorial-cta">
+    <i class="fa-solid fa-shield-halved"></i>
+    <div>
+      <strong>Only download from pages you trust.</strong>
+      Every game link on GameRock points to a third-party file host — we don't host the
+      files ourselves. Use this guide to check what you're downloading before you install it.
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARTICLE BODY ============ -->
+<section class="wrap">
+  <div class="prose">
+
+    <p>
+      Sideloading an APK is one of the most useful things you can do on Android — but it's
+      also one of the riskiest if you don't know what you're doing. Unlike the Play Store,
+      there's no Google review team scanning a random APK before it reaches your phone.
+      If a file is malicious, it's on you to catch it.
+    </p>
+    <p>
+      The good news: you don't need to be a security expert. A few simple checks — which
+      take less than five minutes — will catch the vast majority of shady APKs. Here's exactly
+      what to look at.
+    </p>
+
+    <h2>1. Check Where the Download Came From</h2>
+    <p>
+      Before you touch the file, look at the URL of the page you downloaded it from. This is
+      the single most important step, and it's also the easiest to skip.
+    </p>
+    <ul>
+      <li><strong>Prefer known repos:</strong> APKMirror, APKPure, and the developer's own site are safer than random "download free unlocked everything" sites.</li>
+      <li><strong>Watch for lookalike domains:</strong> <code>apkpure-download.net</code> is not APKPure. Check the spelling of the domain, not just the logo.</li>
+      <li><strong>Beware of misleading buttons:</strong> Fake "Download" buttons that open a pop-up are a classic sign. The real download button usually starts automatically after a short countdown.</li>
+      <li><strong>No forced installers:</strong> A browser download should give you an <code>.apk</code> file. If it gives you an <code>.exe</code>, a "downloader app," or asks you to install something else first — stop.</li>
+    </ul>
+
+    <h2>2. Look at the File Size and Name</h2>
+    <p>
+      A quick sanity check before installing anything:
+    </p>
+    <ul>
+      <li><strong>Size mismatch:</strong> If the official game is 1.5GB and the APK you downloaded is 40MB, something's wrong. It's likely a fake or stripped-down version.</li>
+      <li><strong>Name mismatch:</strong> The file name should match the app. <code>CarX_Street_v1.8.2.apk</code> is expected. <code>Downloader_final.apk</code> is not.</li>
+      <li><strong>Multiple files:</strong> Some games need an APK plus an OBB data file. That's normal — but make sure you know which is which before installing.</li>
+    </ul>
+
+    <h2>3. Review the Permissions Before You Install</h2>
+    <p>
+      This is where most malicious APKs reveal themselves. When you tap install, Android
+      shows you a permission list. Read it.
+    </p>
+    <ul>
+      <li><strong>Does a game need SMS access?</strong> Almost never. A racing game asking to read your messages is a red flag.</li>
+      <li><strong>Does it need "Device admin" or "Accessibility"?</strong> These are powerful permissions that can let an app control your phone. Only grant them to apps you truly trust.</li>
+      <li><strong>Does it need "Install unknown apps" repeatedly?</strong> A legitimate APK installs once. If it keeps asking to install more, be suspicious.</li>
+      <li><strong>Does it request contacts and location?</strong> Some games do for social features, but weigh that against what the game actually needs.</li>
+    </ul>
+    <p>
+      If the permission list doesn't match the app's purpose, uninstall it before you open it.
+    </p>
+
+    <h2>4. Verify the App's Signature (Advanced but Reliable)</h2>
+    <p>
+      Every legitimate APK is digitally signed by its developer. If someone repackages a
+      popular game with malware, the signature will be different from the official one.
+    </p>
+    <p>
+      You can check signatures using free tools like <strong>APK Signature Scheme v2</strong>
+      info in apps such as <em>APK Analyzer</em> or on a PC with <code>apksigner</code>. If
+      the signature doesn't match the official version's, don't install it. This is a bit
+      technical, but it's the most reliable single check for repackaged APKs.
+    </p>
+
+    <h2>5. Scan the File with VirusTotal</h2>
+    <p>
+      VirusTotal lets you upload an APK and scans it against dozens of antivirus engines
+      at once. It's free and fast.
+    </p>
+    <ul>
+      <li>Upload the APK to <a href="https://www.virustotal.com" target="_blank" rel="noopener">virustotal.com</a>.</li>
+      <li>Look at the detection ratio. A clean file has 0 detections.</li>
+      <li>If 1–2 engines flag it, it might be a false positive from a modded APK. If 10+ engines flag it, delete it immediately.</li>
+    </ul>
+    <p>
+      VirusTotal isn't perfect — new malware can slip through — but it catches the majority
+      of common threats in seconds.
+    </p>
+
+    <h2>6. Install in a Sandbox or on a Spare Device</h2>
+    <p>
+      If you're not sure about an APK but you really want to try it, the safest approach is
+      to install it in an isolated environment:
+    </p>
+    <ul>
+      <li><strong>Use a spare phone:</strong> An old Android device with no personal accounts is ideal.</li>
+      <li><strong>Use a sandbox app:</strong> Tools like <em>Island</em> or <em>Shelter</em> let you run an app in a work profile that limits its reach.</li>
+      <li><strong>Use an emulator:</strong> On PC, an Android emulator lets you test the APK without touching your real phone.</li>
+    </ul>
+    <p>
+      If the app behaves oddly — pops ads outside the game, drains battery fast, or asks for
+      strange permissions on first launch — uninstall it and don't look back.
+    </p>
+
+    <h2>Summary: Slow Down and Check</h2>
+    <p>
+      The most dangerous thing about malicious APKs is urgency. Fake download pages rely on
+      you tapping "Download" without thinking. If you slow down for five minutes and run
+      through the six checks above — source, file name/size, permissions, signature, VirusTotal,
+      and a sandbox — you'll avoid almost every common attack.
+    </p>
+    <p>
+      GameRock links to third-party file hosts, so we can't guarantee what's on those servers.
+      But we can teach you how to check. Use this guide every time you sideload something new,
+      and you'll keep your phone safe.
+    </p>
+
+  </div>
+</section>
+
+<!-- ============ BROKEN LINK ============ -->
+<section class="wrap">
+  <div class="div-brokenlink">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Downloaded a file that looks suspicious? Tell us where you found it and we'll help you check.
+    <a href="#contact">Reach out to us!</a>
+  </div>
+</section>
+
+<!-- ============ READY TO DOWNLOAD ============ -->
+<section class="wrap">
+  <div class="tutorial-cta">
+    <i class="fa-solid fa-download"></i>
+    <div>
+      <strong>Looking for a specific game?</strong>
+      Browse our <a href="../games/games.html">games directory</a> for verified descriptions
+      and download links — and use this guide to check every file before you install it.
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED READS ============ -->
+<section data-section="related-reads" data-scope="all" data-limit="5"></section>
+
+<!-- ============ CTA ============ -->
+<section data-section="cta"></section>
+
+</main>
+
+<!-- footer + radial menu + support modal injected by injection.js -->
+
+<!-- ============ SCRIPT BOOT ============ -->
+<script src="../js/injection.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/injection-sections.js"></script>
+<script src="../js/render.js"></script>
+
+</body>
+</html>

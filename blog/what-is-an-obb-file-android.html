@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyberdeck">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What is an OBB File? (And Why Android Games Need Them) | GameRock</title>
+<meta name="description" content="If you have ever tried to install an APK and got stuck looking for an OBB, this guide is for you. We explain what OBB files are, how to extract them, and where to place them." />
+<meta name="theme-color" content="#05060a" />
+
+<meta property="og:title" content="What is an OBB File? (And Why Android Games Need Them)" />
+<meta property="og:description" content="We explain what OBB files are, how to extract them, and where to place them so your games actually run." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gamerock.com.ng/blog/what-is-an-obb-file-android.html" />
+<meta property="og:image" content="https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&h=375&fit=crop&q=80" />
+<link rel="canonical" href="https://gamerock.com.ng/blog/what-is-an-obb-file-android.html" />
+
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem('gr-theme') || 'cyberdeck';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/responsive.css" />
+
+<!-- Chrome injection (runs synchronous so header/footer appear before paint) -->
+<script src="../js/injection.js"></script>
+<script src="../js/main.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://gamerock.com.ng/gr-logo-1.png" />
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025861444505003" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FLS58RYFRR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FLS58RYFRR');
+</script>
+</head>
+
+<body data-page="blog">
+
+<div class="bg" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="bg-scanlines"></div>
+  <div class="bg-motes" id="bg-motes"></div>
+  <div class="bg-sun"></div>
+  <div class="bg-rain" id="bg-rain"></div>
+  <div class="bg-glow"></div>
+</div>
+
+<!-- header + drawer injected by injection.js -->
+
+<main id="main">
+
+<!-- ============ PAGE HEAD ============ -->
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span>What is an OBB File?</span>
+    </nav>
+
+    <div class="page-head-row">
+      <div>
+        <span class="kicker">// Guide · Technical</span>
+        <h1 class="page-title">What is an <span class="accent">OBB File?</span></h1>
+        <p class="page-lede">
+          You downloaded an APK, but the game won't start. Now you're being told you need 
+          an OBB file. Here is exactly what it is, why it exists, and how to install it 
+          correctly so your game actually works.
+        </p>
+      </div>
+      <div class="page-head-stat">
+        <b>5</b>
+        <span>Min Read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERO COVER ============ -->
+<section class="wrap">
+  <div class="detail-cover parent-cool-border">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5BEenGUyrOcIlonSIdK93I4GT9kLaHE1UFWkrXfFumrORbExKUI8YFO6&s=10" alt="OBB File Structure" />
+  </div>
+</section>
+
+<!-- ============ ARTICLE BODY ============ -->
+<section class="wrap">
+  <div class="prose">
+
+    <p>
+      If you are new to downloading APKs from third-party sites, you have probably run 
+      into this roadblock: You download a 20 MB file for a massive 3D game. You install it, 
+      you open it, and you get a black screen, a "Download Failed" error, or a message saying 
+      the game is missing its data files.
+    </p>
+    <p>
+      Welcome to the world of the <strong>OBB file</strong>. 
+    </p>
+    <p>
+      If you don't know what an OBB is, installing these games can feel impossible. But once 
+      you understand what it does and where it goes, the whole process takes about 30 seconds. 
+      Here is everything you need to know.
+    </p>
+
+    <h2>What is an OBB File?</h2>
+    <p>
+      OBB stands for <strong>Opaque Binary Blob</strong>. In simple terms, it is a massive 
+      data file that contains all the heavy assets for a game—textures, audio, 3D models, and 
+      level files. 
+    </p>
+    <p>
+      When you download a game from the Google Play Store, Google handles this automatically. 
+      But when you download an APK manually, the APK itself usually only contains the code. 
+      The OBB contains the actual game itself.
+    </p>
+
+    <h2>Why Do Games Use OBB Files?</h2>
+    <p>
+      Years ago, Google placed a strict limit on the size of an APK. If a game was bigger 
+      than 50 MB, developers couldn't host it on the Play Store. 
+    </p>
+    <p>
+      To get around this, developers split their games in two. They made a tiny APK (the 
+      installer) and a massive OBB file (the data). Google updated the Play Store long ago 
+      to allow larger apps, but many classic games (especially Gameloft titles like N.O.V.A. 
+      and Asphalt) were built around the OBB system, so they still rely on it today.
+    </p>
+
+    <h2>Where Does the OBB File Go?</h2>
+    <p>
+      This is where 99% of people mess up. If you just put the OBB file anywhere on your 
+      phone, the game will not find it. 
+    </p>
+    <p>
+      The OBB file <strong>must</strong> be placed in a very specific folder on your Android's 
+      internal storage. 
+    </p>
+    <p>
+      The path is exactly:
+      <br>
+      <code>/Android/obb/package_name/</code>
+    </p>
+    <p>
+      Let's break that down:
+    </p>
+    <ul>
+      <li><strong>/Android/obb/</strong> — This is the folder where Android expects all game data to live.</li>
+      <li><strong>package_name/</strong> — This is the unique identifier of the game (e.g., <code>com.gameloft.android.ANMP.GloftN2HP</code>). You cannot make up a folder name. It must match the package name of the APK you installed.</li>
+      <li><strong>main.obb</strong> — The OBB file itself must often be renamed to "main.obb" to be recognized by the game.</li>
+    </ul>
+
+    <h2>How to Install an OBB File (Step-by-Step)</h2>
+    <p>
+      Here is the exact process to get the game running.
+    </p>
+    <ol>
+      <li><strong>Download the APK and the OBB:</strong> We host both files on our download pages. The OBB is usually delivered inside a ZIP or RAR archive.</li>
+      <li><strong>Extract the Archive:</strong> Use a file manager (like <a href="../apps/game-tools/mt-manager.html">MT Manager</a>) or an app like ZArchiver to extract the OBB file from the ZIP.</li>
+      <li><strong>Find the exact folder:</strong> Open your file manager and navigate to <code>Android/obb/</code>. Look for a folder with the game's package name. If it doesn't exist, create it.</li>
+      <li><strong>Move the OBB:</strong> Move your extracted OBB file inside that folder.</li>
+      <li><strong>Install the APK:</strong> Now, install the APK. The game will launch, find the OBB, and load your assets.</li>
+    </ol>
+
+    <h2>Modern Android and Virtual Machines</h2>
+    <p>
+      If you are on Android 11, 12, 13, or 14, there is a new problem. Google restricted 
+      access to the <code>Android/obb/</code> folder for privacy reasons. Your standard 
+      file manager might not be able to move files into it anymore.
+    </p>
+    <p>
+      This is exactly why we recommend using <a href="../apps/game-tools/vphoneos.html">VPhoneOS</a> 
+      or <a href="../apps/game-tools/f1vm.html">F1 VM</a>. Inside a virtual machine, you have 
+      full root access. You can use MT Manager to drag and drop the OBB into the right folder 
+      without fighting Android's security restrictions.
+    </p>
+    <p>
+      Once you get the hang of OBB files, installing classic games becomes second nature. 
+      If you are looking for a complete walkthrough on a specific game, check out our 
+      <a href="nova2-install-guide.html">N.O.V.A. 2 Install Guide</a> to see the OBB 
+      placement in action.
+    </p>
+
+  </div>
+</section>
+
+<!-- ============ BROKEN LINK ============ -->
+<section class="wrap">
+  <div class="div-brokenlink">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    Still confused about where the OBB goes? Tell us which game you are trying to install.
+    <a href="#contact">Reach out to us!</a>
+  </div>
+</section>
+
+<!-- ============ READY TO DOWNLOAD ============ -->
+<section class="wrap">
+  <div class="tutorial-cta">
+    <i class="fa-solid fa-folder-open"></i>
+    <div>
+      <strong>Need a file manager that can handle OBBs?</strong>
+      Standard file managers often block the Android/obb folder on modern phones. 
+      Download <a href="../apps/game-tools/mt-manager.html">MT Manager</a> to easily extract 
+      and move your OBB files where they belong.
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED READS ============ -->
+<section data-section="related-reads" data-scope="all"></section>
+
+<!-- ============ CTA ============ -->
+<section data-section="cta"></section>
+
+</main>
+
+<!-- footer + radial menu + support modal injected by injection.js -->
+
+<!-- ============ SCRIPT BOOT ============ -->
+<script src="../js/injection.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/injection-sections.js"></script>
+<script src="../js/render.js"></script>
+
+</body>
+</html>
